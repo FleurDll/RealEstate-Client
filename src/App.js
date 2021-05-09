@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+import SideBar from "./components/sidebar";
+import Home from "./pages/Home";
+import SingleBiens from "./pages/singleBiens";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    /* let slug = window.location.pathname; */
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <BrowserRouter>
+            <SideBar isOpen={isOpen} toggle={toggle} />
+            <Navbar toggle={toggle} />
+            <Switch>
+                <Route path="/" component={Home} exact />
+                <Route path="/biens/:slug" component={SingleBiens} exact />
+            </Switch>
+            <Footer />
+        </BrowserRouter>
+    );
+};
 
 export default App;
