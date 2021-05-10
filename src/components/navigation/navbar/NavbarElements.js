@@ -64,6 +64,8 @@ export const MobileIcon = styled(FaBars)`
     }
 `;
 
+
+
 export const NavMenu = styled.ul`
     display: flex;
     align-items: center;
@@ -100,4 +102,13 @@ export const NavLinkS = styled(LinkS)`
 
 export const NavLinkRouter = styled(LinkR)`
     ${styledLink}
+`;
+
+export const NavLinkRouterSmallScreen = styled(LinkR)`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        ${styledLink}
+    }
 `;

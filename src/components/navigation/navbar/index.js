@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { animateScroll as scroll } from "react-scroll";
-import { Nav, NavContainer, NavLogo, NavMenu, NavItem, NavLinkS, MobileIcon, NavLinkRouter } from "./NavbarElements";
+import { Nav, NavContainer, NavLogo, NavMenu, NavItem, NavLinkS, MobileIcon, NavLinkRouter, NavLinkRouterSmallScreen } from "./NavbarElements";
 
 
 const Navbar = ({ toggle }) => {
@@ -37,7 +37,7 @@ const Navbar = ({ toggle }) => {
                 {slug === "/" ?
                     <MobileIcon onClick={toggle} />
                     :
-                    <NavLinkRouter to="/" onClick={handleRouterLinkClick} >Retour</NavLinkRouter>
+                    <NavLinkRouterSmallScreen to="/" onClick={handleRouterLinkClick} >Retour</NavLinkRouterSmallScreen>
                 }
                 {slug === "/" ?
                     <NavMenu>
