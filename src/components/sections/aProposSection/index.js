@@ -3,7 +3,7 @@ import sanityClient from "../../../client";
 import BlockContent from "@sanity/block-content-to-react";
 import PhoneCard from "../../cards/phoneCard";
 import EmailCard from "../../cards/emailCard";
-import { AProposContainer, AProposWrapper, Column, TextWrapper, TopLine, Heading, Subtitle, ContactWrapper, ProfileImageWrapper, ProfileImage } from "./AProposElements";
+import { AProposContainer, AProposWrapper, Column, TextWrapper, TopLine, Heading, Subtitle, ContactWrapper, EmailCardWrapper, ProfileImageWrapper, ProfileImage } from "./AProposElements";
 
 const APropos = () => {
     const [textData, setTextData] = useState(null);
@@ -38,7 +38,9 @@ const APropos = () => {
                     </TextWrapper>
                     <ContactWrapper>
                         <PhoneCard />
-                        <EmailCard />
+                        <EmailCardWrapper to="contact" smooth={true} duration={500} spy={true} exact="true" offset={-80} >
+                            <EmailCard />
+                        </EmailCardWrapper>
                     </ContactWrapper>
                 </Column>
                 <Column>

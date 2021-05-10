@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const BiensContainer = styled.div``;
+export const BiensContainer = styled.div`
+    
+`;
 
 export const BiensWrapper = styled.div`
     display: grid;
@@ -14,12 +16,11 @@ export const BiensWrapper = styled.div`
     padding: 30px 5px;
     justify-content: center;
     box-shadow: rgb(0 0 0 / 30%) 0px 0.0625rem 0.1875rem 0px;
-`;
 
-export const Row = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @media screen and (max-width: 768px) {
+        grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const Column = styled.div``;
@@ -31,6 +32,10 @@ export const ContactCard = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 90px 0;
+
+    @media screen and (max-width: 768px) {
+        margin: 40px 0 0;
+    }
 `;
 
 export const ContactCardTitle = styled.div`
@@ -40,7 +45,7 @@ export const ContactCardTitle = styled.div`
 
 export const TextDescription = styled.div`
     color: grey;
-    margin: 40px;
+    margin: 40px 15px;
 `;
 
 export const DPEImageWrapper = styled.div`
@@ -49,4 +54,8 @@ export const DPEImageWrapper = styled.div`
     align-items: center;
 `;
 
-export const DPEImg = styled.img``;
+export const DPEImg = styled.img`
+    @media screen and (max-width: 480px) {
+        max-width: 200px;
+    }
+`;

@@ -36,10 +36,20 @@ export const BottomRight = styled.div`
       
 `;
 
-export const DescriptionItem = styled.div`
+export const styledDescriptionItem = css`
     display: flex;
     align-items: center;
     margin-right: 10px;
+`;
+
+export const DescriptionItem = styled.div`
+    ${styledDescriptionItem};
+`;
+
+export const DescriptionItemType = styled.div`
+    ${styledDescriptionItem};
+    ${'' /* border-right: 1px solid #ff6584; */}
+    padding-right: 10px;
 `;
 
 export const styledIcon = css`

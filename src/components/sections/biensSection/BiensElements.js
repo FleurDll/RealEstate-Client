@@ -23,7 +23,7 @@ export const HousesWrapper = styled.div`
 
     @media screen and (max-width: 480px) {
         max-width: 400px;
-        padding: 60px 0px;
+        padding: 40px 0px;
     }
 `;
 

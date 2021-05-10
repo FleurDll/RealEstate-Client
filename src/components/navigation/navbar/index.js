@@ -24,11 +24,21 @@ const Navbar = ({ toggle }) => {
         scroll.scrollToTop();
 
     };
+
+    const handleRouterLinkClick = () => {
+        setScrollNav(false);
+        /* window.location.reload(); */
+    };
+
     return (
-        <Nav scrollNav={slug === "/" ? scrollNav : true}>
+        <Nav scrollNav={scrollNav} slug={slug}>
             <NavContainer>
                 <NavLogo to="/" onClick={toggleHome}>Amélie Dufour</NavLogo>
-                <MobileIcon onClick={toggle} />
+                {slug === "/" ?
+                    <MobileIcon onClick={toggle} />
+                    :
+                    <NavLinkRouter to="/" onClick={handleRouterLinkClick} >Retour</NavLinkRouter>
+                }
                 {slug === "/" ?
                     <NavMenu>
                         <NavItem>
@@ -47,7 +57,7 @@ const Navbar = ({ toggle }) => {
                     :
                     <NavMenu>
                         <NavItem>
-                            <NavLinkRouter to="/" render={(props) => window.location.reload()}>Retour</NavLinkRouter>
+                            <NavLinkRouter to="/" onClick={handleRouterLinkClick} >Retour</NavLinkRouter>
                         </NavItem>
                     </NavMenu>
                 }

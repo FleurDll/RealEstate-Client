@@ -13,23 +13,35 @@ export const FooterWrap = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 480px) {
+        padding: 48px 10px;
+    }
 `;
 
 export const FooterTitle = styled.h1`
     margin: 20px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 22px;
+    }
 `;
 
 export const FooterContactInfo = styled.h3`
     color: #F0F0F0;
     margin: 5px;
     font-size: 18px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 15px;
+    }
 `;
 
 export const FooterCopyright = styled.div`
     font-size: 12px;
 `;
 
-export const FooterSocialMedia = styled.a`
+export const FooterSocialMedia = styled.div`
     margin: 20px;
 `;
 

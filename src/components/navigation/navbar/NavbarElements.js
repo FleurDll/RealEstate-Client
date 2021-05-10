@@ -5,6 +5,9 @@ import { FaBars } from "react-icons/fa";
 
 export const Nav = styled.nav`
     background: ${({ scrollNav }) => (scrollNav ? "#0076b3" : "transparent")};
+
+    background: ${({ slug }) => (slug !== "/" && "#0076b3")};
+
     color: #fff;
 
     display: flex;

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { ModalContainer, ModalContent, ModalHeader, ModalTitle, ModalBody, ModalFooter, ModalCloseButton } from "./ModalElements";
 
-const Modal = (props) => {
+const Modal = ({ onClose, show, title, text }) => {
     const closeOnEscapeKeyDown = (e) => {
         if ((e.charcode || e.keyCode) === 27) {
-            props.onClose();
+            onClose();
         }
     };
 
@@ -13,17 +13,18 @@ const Modal = (props) => {
         return function cleanup() {
             document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <ModalContainer onClick={props.onClose} show={props.show}>
+        <ModalContainer onClick={onClose} show={show}>
             <ModalContent onClick={e => e.stopPropagation()}>
                 <ModalHeader>
-                    <ModalTitle>{props.title}</ModalTitle>
+                    <ModalTitle>{title}</ModalTitle>
                 </ModalHeader>
-                <ModalBody>{props.text}</ModalBody>
+                <ModalBody>{text}</ModalBody>
                 <ModalFooter>
-                    <ModalCloseButton onClick={props.onClose}>Fermer</ModalCloseButton>
+                    <ModalCloseButton onClick={onClose}>Fermer</ModalCloseButton>
                 </ModalFooter>
             </ModalContent>
         </ModalContainer>

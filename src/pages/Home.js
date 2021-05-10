@@ -5,12 +5,23 @@ import Estimation from "../components/sections/estimationSection";
 import APropos from '../components/sections/aProposSection';
 import Contact from '../components/sections/contactSection';
 import Modal from "../components/modal";
+import Navbar from '../components/navigation/navbar';
+import Sidebar from "../components/navigation/sidebar";
 
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    /* let slug = window.location.pathname; */
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <div>
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <Navbar toggle={toggle} />
             <HeroSection />
             <Biens />
             <Estimation />

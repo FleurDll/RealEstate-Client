@@ -5,7 +5,8 @@ import Carousel from "./carousel";
 import Details from "./details";
 import PhoneCard from "../../components/cards/phoneCard";
 
-import { BiensContainer, BiensWrapper, Row, ContactCard, ContactCardTitle, TextDescription, DPEImageWrapper, DPEImg, Column } from "./singleBiensElements";
+import { BiensContainer, BiensWrapper, ContactCard, ContactCardTitle, TextDescription, DPEImageWrapper, DPEImg, Column } from "./singleBiensElements";
+import Navbar from '../../components/navigation/navbar';
 
 const SingleBiens = ({ match }) => {
     const [singleHouse, setSingleHouse] = useState(null);
@@ -42,6 +43,7 @@ const SingleBiens = ({ match }) => {
 
     return (
         <>
+            <Navbar />
             <BiensContainer>
                 <BiensWrapper>
                     <Column>

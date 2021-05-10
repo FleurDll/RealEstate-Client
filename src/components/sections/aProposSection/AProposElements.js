@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkS } from "react-scroll";
 
 export const AProposContainer = styled.div`
     color: #000;
@@ -20,6 +21,7 @@ export const AProposWrapper = styled.div`
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
+        padding: 40px 10px;
     }
 `;
 
@@ -68,6 +70,10 @@ export const Subtitle = styled.div`
 `;
 
 export const ContactWrapper = styled.div``;
+
+export const EmailCardWrapper = styled(LinkS)`
+    cursor: pointer;
+`;
 
 export const ProfileImageWrapper = styled.div`
     

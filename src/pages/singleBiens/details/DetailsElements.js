@@ -4,13 +4,16 @@ import { GoLocation } from "react-icons/go";
 import { BiBed, BiBath, BiBuildingHouse } from "react-icons/bi";
 import { GiHomeGarage } from "react-icons/gi";
 
-export const DetailsContainer = styled.div``;
+export const DetailsContainer = styled.div`
+    ${'' /* padding: 30px 0; */}
+`;
 
 export const Title = styled.div`
     text-align: center;
     font-weight: bold;
     color: #708090;
     margin: 20px auto 30px;
+    font-size: 20px;
 `;
 
 export const Description = styled.div`
@@ -39,6 +42,10 @@ export const Separation = styled.div`
     width: 2px;
     background-color: #FF6584;
     margin: auto;
+
+    @media screen and (max-width: 768px) {
+        height: 120px;
+    }
 `;
 
 const styledIcon = css`
@@ -68,5 +75,5 @@ export const BedroomIcon = styled(BiBed)`
 `;
 
 export const BathIcon = styled(BiBath)`
- ${styledIcon};
+    ${styledIcon};
 `;

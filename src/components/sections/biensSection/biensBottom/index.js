@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from "lodash";
-import { BiensBottomContainer, Description, Title, Garage, BottomLeft, BottomRight, DescriptionItem, GarageIcon, BedroomIcon, BathIcon } from "./BiensBottomElements";
+import { BiensBottomContainer, Description, Title, Garage, BottomLeft, BottomRight, DescriptionItem, DescriptionItemType, GarageIcon, BedroomIcon, BathIcon } from "./BiensBottomElements";
 
 const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
     return (
@@ -11,7 +11,7 @@ const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
             </Description>
             <Description>
                 <BottomLeft>
-                    <DescriptionItem>{_.upperFirst(type)}  |</DescriptionItem>
+                    <DescriptionItemType>{_.upperFirst(type)}</DescriptionItemType>
                     <DescriptionItem><BedroomIcon />{bedroom}</DescriptionItem>
                     <DescriptionItem><BathIcon />{bathroom}</DescriptionItem>
                 </BottomLeft>

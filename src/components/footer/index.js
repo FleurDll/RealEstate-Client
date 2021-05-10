@@ -13,7 +13,7 @@ const Footer = () => {
                     <a href="https://www.facebook.com/ameliedufourhappyimmo" rel="noreferrer" target="_blank"><FacebookIcon /></a>
                     <a href="https://www.instagram.com/dufete/" rel="noreferrer" target="_blank"><InstagramIcon /></a>
                 </FooterSocialMedia>
-                <FooterCopyright><a style={{ textDecoration: "none", color: "#fff" }} href="https://www.facebook.com/fleurdalle" rel="noreferrer" target="_blank">Fleur Dalle</a><CopyrightIcon />2021 All rights reserved.</FooterCopyright>
+                <FooterCopyright>Fleur Dalle<CopyrightIcon />2021 All rights reserved.</FooterCopyright>
             </FooterWrap>
         </FooterContainer>
     );

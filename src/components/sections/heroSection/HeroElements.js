@@ -60,6 +60,7 @@ export const HeroTitle = styled.div`
     color: #fff;
     font-size: 48px;
     text-align: center;
+    padding-top: 30px;
 
     @media screen and (max-width: 768px) {
         font-size: 40px;
@@ -72,4 +73,28 @@ export const HeroTitle = styled.div`
 
 export const HeroContactWrapper = styled.div`
     margin-top: 32px;
+`;
+
+////////////////////// NO DATA
+
+export const NoDataContainer = styled.div`
+    ${'' /* position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%; */}
+    background : #0076b3;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const NoDataMessage = styled.p`
+    font-size: 1.5rem;
+    line-height: 2;
+    transition: 0.2s ease-in-out;
+    color: #fff;
+    margin: 200px 0;
 `;

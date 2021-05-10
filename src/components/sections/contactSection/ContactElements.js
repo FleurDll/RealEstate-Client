@@ -5,14 +5,6 @@ import { BiCheck } from "react-icons/bi";
 export const ContactContainer = styled.div`
     color: #000;
     background: #F0F2F5;
-
-    @media screen and (max-width: 768px) {
-        padding: 40px 10px;
-    }
-
-    @media screen and (max-width: 500px) {
-        padding: 10px 0;
-    }
 `;
 
 export const ContactWrap = styled.div`
@@ -26,7 +18,7 @@ export const ContactWrap = styled.div`
     justify-content: center;
 
     @media screen and (max-width: 768px) {
-        padding: 20px 24px;
+        padding: 40px 10px;
     }
 `;
 
