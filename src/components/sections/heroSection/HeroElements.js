@@ -20,7 +20,7 @@ export const HeroContainer = styled.div`
         bottom: 0;
         background: linear-gradient(
             180deg, 
-            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.2) 0%,
             rgba(0, 0, 0, 0) 100%
             ),
             linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, transparent 100%);
