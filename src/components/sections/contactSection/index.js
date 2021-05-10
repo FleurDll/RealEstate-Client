@@ -3,14 +3,13 @@ import sanityClient from "../../../client";
 import { init } from 'emailjs-com';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import 'reactjs-popup/dist/index.css';
-
 import { ContactContainer, SendButtonWrap, LoadingIcon, ContactH1, ContactWrap, ContactForm } from "./ContactElements";
 import SendCard from '../../cards/sendCard';
 
-init("user_1tlVoFtThgsIBURh15Ysw");
+const Contact = ({ setShowModal, showModal, setShowModalError, showModalError, emailJSKey }) => {
 
-const Contact = ({ setShowModal, showModal }) => {
+    init(emailJSKey.user);
+
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
@@ -18,7 +17,6 @@ const Contact = ({ setShowModal, showModal }) => {
     const [error, setError] = useState(false);
     const [sendButton, setSendButton] = useState(true);
     const [loading, setLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(false);
     const [textData, setTextData] = useState(null);
 
     const windowWidth = window.innerWidth;
@@ -45,7 +43,6 @@ const Contact = ({ setShowModal, showModal }) => {
             width: "250px"
         }
     });
-
 
     const classes = useStyles();
 
@@ -74,7 +71,7 @@ const Contact = ({ setShowModal, showModal }) => {
         setSendButton(false);
 
         if (name && isEmail() && message) {
-            sendFeedback("template_nw916f1", {
+            sendFeedback(emailJSKey.template, {
                 name,
                 phone,
                 email,
@@ -89,7 +86,7 @@ const Contact = ({ setShowModal, showModal }) => {
 
     const sendFeedback = (templateId, variables) => {
         window.emailjs
-            .send("service_8eaojtg", templateId, variables)
+            .send(emailJSKey.service, templateId, variables)
             .then((res) => {
                 successMessage();
                 setName("");
@@ -99,8 +96,9 @@ const Contact = ({ setShowModal, showModal }) => {
             })
             .catch(
                 (err) => {
-                    setErrorMessage(true);
                     setSendButton(true);
+                    setShowModalError(true);
+                    setLoading(false);
                 }
             );
     };
@@ -119,7 +117,7 @@ const Contact = ({ setShowModal, showModal }) => {
                         id="name-input"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        label={showModal ? "" : "Nom"}
+                        label={showModal | showModalError ? "" : "Nom"}
                         type="text"
                         variant="outlined"
                     />
@@ -128,7 +126,7 @@ const Contact = ({ setShowModal, showModal }) => {
                         id="phone-input"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        label={showModal ? "" : "Téléphone"}
+                        label={showModal | showModalError ? "" : "Téléphone"}
                         type="text"
                         variant="outlined"
                     />
@@ -139,7 +137,7 @@ const Contact = ({ setShowModal, showModal }) => {
                         id="email-input"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        label={showModal ? "" : "Email"}
+                        label={showModal | showModalError ? "" : "Email"}
                         type="text"
                         variant="outlined"
                     />
@@ -150,7 +148,7 @@ const Contact = ({ setShowModal, showModal }) => {
                         id="message-input"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        label={showModal ? "" : "Message"}
+                        label={showModal | showModalError ? "" : "Message"}
                         multiline
                         rows={12}
                         variant="outlined"
@@ -162,7 +160,6 @@ const Contact = ({ setShowModal, showModal }) => {
                             <SendCard />
                         </SendButtonWrap>
                     }
-                    {errorMessage && <h3>Il y a eu une erreur, veillez réessayer plus tard...</h3>}
                 </ContactForm>
             </ContactWrap>
         </ContactContainer>

@@ -27,7 +27,7 @@ export const AProposWrapper = styled.div`
 
 export const Column = styled.div`
     margin-bottom: 15px;
-    padding: 0 15px;
+    padding: 0 5px;
 `;
 
 export const TextWrapper = styled.div`
@@ -36,17 +36,27 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.div`
-     color: #0076b3;
+    display: flex;
+    align-items: center;
+`;
+
+export const TopLineText = styled.div`
+    color: #0076b3;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 20px;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    margin-bottom: 16px; 
+`;
+
+export const LogoHappyImmo = styled.img`
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
 `;
 
 export const Heading = styled.div`
-    margin-bottom: 24px;
+    margin: 12px 0 24px 0;
     font-size: 48px;
     line-height: 1.1;
     font-weight: 600;

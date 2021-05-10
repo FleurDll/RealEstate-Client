@@ -1,7 +1,8 @@
 import sanityClient from "@sanity/client";
 
 export default sanityClient({
-    projectId: "8u4s2mp5",
+    projectId: process.env.REACT_APP_SANITY_ID,
     dataset: "production",
-    useCdn: true
+    apiVersion: '2021-03-25', // use a UTC date string
+    useCdn: true, // `false` if you want to ensure fresh data
 });

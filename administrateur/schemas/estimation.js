@@ -5,37 +5,32 @@ export default {
     fields: [
         {
             name: 'text1',
-            title: '1er text (en bleu)',
-            type: 'string',
-        },
-        {
-            name: 'text2',
-            title: '2ème text (le plus grand)',
+            title: 'Titre',
             type: 'string',
         },
         {
             name: 'text3',
-            title: '3ème text (détails)',
+            title: 'Text descriptif',
             type: 'string',
         },
         {
             name: 'criteres1',
-            title: 'critères1',
+            title: 'critères 1',
             type: 'string',
         },
         {
             name: 'criteres2',
-            title: 'critères2',
+            title: 'critères 2',
             type: 'string',
         },
         {
             name: 'criteres3',
-            title: 'critères3',
+            title: 'critères 3',
             type: 'string',
         },
         {
             name: 'criteres4',
-            title: 'critères4',
+            title: 'critères 4',
             type: 'string',
         },
         {

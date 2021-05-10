@@ -33,9 +33,12 @@ export const DetailsItem = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
 `;
 
-export const Text = styled.div``;
+export const Text = styled.p`
+    font-size: 15px;
+`;
 
 export const Separation = styled.div`
     height: 200px;

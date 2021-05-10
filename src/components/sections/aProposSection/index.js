@@ -3,7 +3,7 @@ import sanityClient from "../../../client";
 import BlockContent from "@sanity/block-content-to-react";
 import PhoneCard from "../../cards/phoneCard";
 import EmailCard from "../../cards/emailCard";
-import { AProposContainer, AProposWrapper, Column, TextWrapper, TopLine, Heading, Subtitle, ContactWrapper, EmailCardWrapper, ProfileImageWrapper, ProfileImage } from "./AProposElements";
+import { AProposContainer, AProposWrapper, Column, TextWrapper, TopLine, Heading, Subtitle, ContactWrapper, EmailCardWrapper, TopLineText, LogoHappyImmo, ProfileImageWrapper, ProfileImage } from "./AProposElements";
 
 const APropos = () => {
     const [textData, setTextData] = useState(null);
@@ -32,7 +32,7 @@ const APropos = () => {
             <AProposWrapper>
                 <Column>
                     <TextWrapper>
-                        <TopLine>{textData[0].text1}</TopLine>
+                        <TopLine><TopLineText>{textData[0].text1}</TopLineText><LogoHappyImmo src="images/logo/happy-immo-logo-sans-bg.png" alt="logo Happy-Immo" /></TopLine>
                         <Heading>{textData[0].text2}</Heading>
                         <Subtitle><BlockContent blocks={textData[0].text3} projectId="m02nlpav" dataset="production" /></Subtitle>
                     </TextWrapper>

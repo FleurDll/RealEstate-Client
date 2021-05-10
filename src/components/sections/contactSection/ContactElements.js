@@ -64,6 +64,4 @@ export const ConfirmIcon = styled(BiCheck)`
     animation: ${validate} 0.8s linear;
 `;
 
-export const SendButtonWrap = styled.div`
-    
-`;
+export const SendButtonWrap = styled.div``;

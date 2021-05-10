@@ -4,12 +4,23 @@ import Footer from "./components/footer";
 import Home from "./pages/Home";
 import SingleBiens from "./pages/singleBiens";
 
+const emailJSKey = {
+    template: process.env.REACT_APP_EMAILJS_TEMPLATE,
+    service: process.env.REACT_APP_EMAILJS_SERVICE,
+    user: process.env.REACT_APP_EMAILJS_USER
+};
 
 const App = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" component={Home} exact />
+                <Route
+                    path="/"
+                    render={(props) => (
+                        <Home {...props} emailJSKey={emailJSKey} />
+                    )}
+                    exact
+                />
                 <Route path="/biens/:slug" component={SingleBiens} exact />
             </Switch>
             <Footer />

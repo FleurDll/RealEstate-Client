@@ -8,11 +8,10 @@ import Modal from "../components/modal";
 import Navbar from '../components/navigation/navbar';
 import Sidebar from "../components/navigation/sidebar";
 
-const Home = () => {
+const Home = ({ emailJSKey }) => {
     const [showModal, setShowModal] = useState(false);
+    const [showModalError, setShowModalError] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-
-    /* let slug = window.location.pathname; */
 
     const toggle = () => {
         setIsOpen(!isOpen);
@@ -26,12 +25,24 @@ const Home = () => {
             <Biens />
             <Estimation />
             <APropos />
-            <Contact setShowModal={setShowModal} showModal={showModal} />
+            <Contact
+                emailJSKey={emailJSKey}
+                setShowModal={setShowModal}
+                showModal={showModal}
+                setShowModalError={setShowModalError}
+                showModalError={showModalError}
+            />
             <Modal
                 title="Message Envoyé !"
                 text="Merci, je vous répondrai au plus vite."
                 onClose={() => setShowModal(false)}
                 show={showModal}
+            />
+            <Modal
+                title="Il y a eu une erreur..."
+                text="Veuillez réessayer ultérieurement, merci."
+                onClose={() => setShowModalError(false)}
+                show={showModalError}
             />
         </div>
     );

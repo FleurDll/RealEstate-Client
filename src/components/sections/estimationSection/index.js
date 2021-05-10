@@ -39,10 +39,10 @@ const Estimation = () => {
                     <EstimationTitle>{textData[0].text1}</EstimationTitle>
                     <EstimationText>
                         <EstimationDescription>{textData[0].text3}</EstimationDescription>
-                        <EstimationCriteres text={textData[0].criteres1} />
-                        <EstimationCriteres text={textData[0].criteres2} />
-                        <EstimationCriteres text={textData[0].criteres3} />
-                        <EstimationCriteres text={textData[0].criteres4} />
+                        {textData[0].criteres1 && <EstimationCriteres text={textData[0].criteres1} />}
+                        {textData[0].criteres2 && <EstimationCriteres text={textData[0].criteres2} />}
+                        {textData[0].criteres3 && <EstimationCriteres text={textData[0].criteres3} />}
+                        {textData[0].criteres4 && <EstimationCriteres text={textData[0].criteres4} />}
                     </EstimationText>
                     <EstimationContactWrapper>
                         <PhoneCard />

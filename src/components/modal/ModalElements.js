@@ -27,6 +27,10 @@ export const ModalContent = styled.div`
     transition: all 0.3s ease-in-out;
     border-radius: 0.1875rem;
     ${'' /* transform: ${({ show }) => (show ? "translateY(0)" : "")}; */}
+
+    @media screen and (max-width: 500px) {
+        max-width: 320px;
+    }
 `;
 
 export const ModalHeader = styled.div`
