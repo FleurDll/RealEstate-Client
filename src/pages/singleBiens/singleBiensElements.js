@@ -46,6 +46,8 @@ export const ContactCardTitle = styled.div`
 export const TextDescription = styled.div`
     color: grey;
     margin: 40px 15px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
 `;
 
 export const DPEImageWrapper = styled.div`

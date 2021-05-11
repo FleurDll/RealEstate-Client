@@ -42,6 +42,7 @@ export const NavLogo = styled(LinkR)`
     justify-self: flex-start;
     align-items: center;
     color: #fff;
+    ${'' /* color: #ff6584; */}
     cursor: pointer;
     font-size: 1.5rem;
     margin-left: 24px;
@@ -64,8 +65,6 @@ export const MobileIcon = styled(FaBars)`
     }
 `;
 
-
-
 export const NavMenu = styled.ul`
     display: flex;
     align-items: center;
@@ -84,6 +83,7 @@ export const NavItem = styled.li`
 
 export const styledLink = css`
     color: #fff;
+    ${'' /* color: #ff6584; */}
     display: flex;
     align-items: center;
     text-decoration: none;

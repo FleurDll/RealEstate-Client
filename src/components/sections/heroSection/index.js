@@ -6,6 +6,7 @@ import { HeroContainer, HeroBackground, VideoBackground, HeroContent, HeroTitle,
 
 const HeroSection = () => {
     const [textData, setTextData] = useState(null);
+    const [showNoDataContainer, setShowNoDataContainer] = useState(false);
 
     useEffect(() => {
         sanityClient
@@ -16,15 +17,24 @@ const HeroSection = () => {
             .catch(console.error);
     }, []);
 
-    if (!textData) return (
-        <NoDataContainer>
-            <NoDataMessage>
-                Oh oh, une erreur s'est produite...
+    if (!textData) {
+
+        setTimeout(() => {
+            setShowNoDataContainer(true);
+        }, 1000);
+
+        return (
+            <NoDataContainer>
+                {showNoDataContainer &&
+                    <NoDataMessage>
+                        Oh oh, une erreur s'est produite...
             <br></br>
                 Veuillez réessayer plus tard.
             </NoDataMessage>
-        </NoDataContainer>
-    );
+                }
+            </NoDataContainer>
+        );
+    }
 
     return (
         <HeroContainer>
