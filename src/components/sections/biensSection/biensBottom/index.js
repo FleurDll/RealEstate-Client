@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from "lodash";
+// eslint-disable-next-line no-unused-vars
 import { BiensBottomContainer, Description, Title, BottomLeft, BottomRight, DescriptionItem, DescriptionItemType, GarageIcon, BedroomIcon, BathIcon } from "./BiensBottomElements";
 
 const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
