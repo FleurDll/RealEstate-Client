@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import { BiBed, BiBath } from "react-icons/bi";
+// eslint-disable-next-line no-unused-vars
 import { GiHomeGarage } from "react-icons/gi";
+import { AiOutlineCar } from "react-icons/ai";
 
 export const BiensBottomContainer = styled.div`
     display: flex;
@@ -25,15 +27,12 @@ export const Title = styled.h1`
         font-size: 16px;
     }
 `;
-export const Garage = styled.p`
-`;
 
 export const BottomLeft = styled.div`
     display: flex;
 `;
 
-export const BottomRight = styled.div`
-      
+export const BottomRight = styled.div`  
 `;
 
 export const styledDescriptionItem = css`
@@ -57,10 +56,9 @@ export const DescriptionItemType = styled.div`
 export const styledIcon = css`
     color: #787878;
     margin-right: 5px;
-    vertical-align: top;
 `;
 
-export const GarageIcon = styled(GiHomeGarage)`
+export const GarageIcon = styled(AiOutlineCar)`
     ${styledIcon}
 `;
 

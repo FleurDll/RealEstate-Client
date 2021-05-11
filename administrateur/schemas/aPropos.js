@@ -9,6 +9,17 @@ export default {
             type: 'string',
         },
         {
+            name: "logoHappyImmo",
+            title: "Afficher Logo Happy Immo ?",
+            type: "string",
+            options: {
+                list: [
+                    { value: "oui", title: "Oui" },
+                    { value: "non", title: "Non" }
+                ],
+            },
+        },
+        {
             name: 'text2',
             title: 'Prénom et Nom',
             type: 'string',

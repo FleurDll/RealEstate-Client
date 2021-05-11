@@ -11,6 +11,7 @@ import enTete from "./enTete";
 import estimation from "./estimation";
 import aPropos from "./aPropos";
 import contact from "./contact";
+import infoPerso from "./infoPerso";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -23,10 +24,11 @@ export default createSchema({
     // in the studio.d to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
+    infoPerso,
     biens,
     enTete,
     estimation,
     aPropos,
-    contact,
+    contact
   ]),
 })

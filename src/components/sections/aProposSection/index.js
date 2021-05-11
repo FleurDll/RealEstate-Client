@@ -13,6 +13,7 @@ const APropos = () => {
             .fetch(`*[_type == "aProposText"]{
                 text1,
                 text2,
+                logoHappyImmo,
                 text3,
                 imageProfile {
                     asset->{
@@ -21,7 +22,7 @@ const APropos = () => {
                     }
                 }
         }`)
-            .then((data) => setTextData(data))
+            .then((data) => setTextData(data[0]))
             .catch(console.error);
     }, []);
 
@@ -32,9 +33,12 @@ const APropos = () => {
             <AProposWrapper>
                 <Column>
                     <TextWrapper>
-                        <TopLine><TopLineText>{textData[0].text1}</TopLineText><LogoHappyImmo src="images/logo/happy-immo-logo-sans-bg.png" alt="logo Happy-Immo" /></TopLine>
-                        <Heading>{textData[0].text2}</Heading>
-                        <Subtitle><BlockContent blocks={textData[0].text3} projectId="m02nlpav" dataset="production" /></Subtitle>
+                        <TopLine>
+                            <TopLineText>{textData.text1}</TopLineText>
+                            {textData.logoHappyImmo === "oui" && <LogoHappyImmo src="images/logo/happy-immo-logo-sans-bg.png" alt="logo Happy-Immo" />}
+                        </TopLine>
+                        <Heading>{textData.text2}</Heading>
+                        <Subtitle><BlockContent blocks={textData.text3} projectId="m02nlpav" dataset="production" /></Subtitle>
                     </TextWrapper>
                     <ContactWrapper>
                         <PhoneCard />
@@ -45,7 +49,7 @@ const APropos = () => {
                 </Column>
                 <Column>
                     <ProfileImageWrapper>
-                        <ProfileImage src={textData[0].imageProfile.asset.url} alt="Photo Amélie Dufour" />
+                        <ProfileImage src={textData.imageProfile.asset.url} alt="Photo Amélie Dufour" />
                     </ProfileImageWrapper>
                 </Column>
             </AProposWrapper>

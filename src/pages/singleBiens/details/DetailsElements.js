@@ -2,7 +2,9 @@ import styled, { css } from "styled-components";
 import { IoPricetagOutline } from "react-icons/io5";
 import { GoLocation } from "react-icons/go";
 import { BiBed, BiBath, BiBuildingHouse } from "react-icons/bi";
+// eslint-disable-next-line no-unused-vars
 import { GiHomeGarage } from "react-icons/gi";
+import { AiOutlineCar } from "react-icons/ai";
 
 export const DetailsContainer = styled.div`
     ${'' /* padding: 30px 0; */}
@@ -69,7 +71,7 @@ export const PriceIcon = styled(IoPricetagOutline)`
     ${styledIcon};
 `;
 
-export const GarageIcon = styled(GiHomeGarage)`
+export const GarageIcon = styled(AiOutlineCar)`
     ${styledIcon};
 `;
 
