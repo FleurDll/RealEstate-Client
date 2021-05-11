@@ -49,9 +49,7 @@ const Biens = () => {
 
     return (
         <HousesContainer >
-
             <HousesWrapper id="biens">
-
                 {newList && newList.map((house) => {
                     return (
                         <HouseLink to={`/biens/${house.slug.current}`} key={house.slug.current}>

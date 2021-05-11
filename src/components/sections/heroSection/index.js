@@ -13,7 +13,7 @@ const HeroSection = () => {
             .fetch(`*[_type == "enTeteText"]{
                 titre
         }`)
-            .then((data) => setTextData(data))
+            .then((data) => setTextData(data[0]))
             .catch(console.error);
     }, []);
 
@@ -42,7 +42,7 @@ const HeroSection = () => {
                 <VideoBackground autoPlay loop muted src={Video} type="video/mp4" />
             </HeroBackground>
             <HeroContent>
-                <HeroTitle>{textData[0].titre}</HeroTitle>
+                <HeroTitle>{textData.titre}</HeroTitle>
                 <HeroContactWrapper>
                     <PhoneCard />
                 </HeroContactWrapper>

@@ -23,7 +23,7 @@ const Estimation = () => {
                     }
                 }
         }`)
-            .then((data) => setTextData(data))
+            .then((data) => setTextData(data[0]))
             .catch(console.error);
     }, []);
 
@@ -33,16 +33,16 @@ const Estimation = () => {
         <EstimationContainer id="estimation">
             <EstimationWrapper>
                 <ColumnLeft>
-                    <EstimationImage src={textData[0].imageEstimation.asset.url} alt="image maison" />
+                    <EstimationImage src={textData.imageEstimation.asset.url} alt="image maison" />
                 </ColumnLeft>
                 <ColumnRight>
-                    <EstimationTitle>{textData[0].text1}</EstimationTitle>
+                    <EstimationTitle>{textData.text1}</EstimationTitle>
                     <EstimationText>
-                        <EstimationDescription>{textData[0].text3}</EstimationDescription>
-                        {textData[0].criteres1 && <EstimationCriteres text={textData[0].criteres1} />}
-                        {textData[0].criteres2 && <EstimationCriteres text={textData[0].criteres2} />}
-                        {textData[0].criteres3 && <EstimationCriteres text={textData[0].criteres3} />}
-                        {textData[0].criteres4 && <EstimationCriteres text={textData[0].criteres4} />}
+                        <EstimationDescription>{textData.text3}</EstimationDescription>
+                        {textData.criteres1 && <EstimationCriteres text={textData.criteres1} />}
+                        {textData.criteres2 && <EstimationCriteres text={textData.criteres2} />}
+                        {textData.criteres3 && <EstimationCriteres text={textData.criteres3} />}
+                        {textData.criteres4 && <EstimationCriteres text={textData.criteres4} />}
                     </EstimationText>
                     <EstimationContactWrapper>
                         <PhoneCard />

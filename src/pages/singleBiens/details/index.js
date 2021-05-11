@@ -25,7 +25,8 @@ const Details = ({ singleHouse }) => {
                 <Column>
                     <DetailsItem>
                         <GarageIcon />
-                        <Text>{_.upperFirst(singleHouse.garage)}</Text>
+                        {/* <Text>{_.upperFirst(singleHouse.garage)}</Text> */}
+                        <Text>{singleHouse.garage === "oui" ? "Avec garage" : "Sans garage"}</Text>
                     </DetailsItem>
                     <DetailsItem>
                         <BedroomIcon />

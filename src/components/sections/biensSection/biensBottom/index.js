@@ -7,8 +7,8 @@ const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
         <BiensBottomContainer>
             <Description>
                 <Title>{title}</Title>
-                <DescriptionItem><GarageIcon />{_.upperFirst(garage)}</DescriptionItem>
-                {/* {garage === "oui" && <DescriptionItem>Garage</DescriptionItem>} */}
+                {/* <DescriptionItem><GarageIcon />{_.upperFirst(garage)}</DescriptionItem> */}
+                {garage === "oui" && <DescriptionItem>Garage</DescriptionItem>}
             </Description>
             <Description>
                 <BottomLeft>

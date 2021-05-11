@@ -26,7 +26,7 @@ const Contact = ({ setShowModal, showModal, setShowModalError, showModalError, e
             .fetch(`*[_type == "contactText"]{
             title
         }`)
-            .then((data) => setTextData(data))
+            .then((data) => setTextData(data[0]))
             .catch(console.error);
     }, []);
 
@@ -109,7 +109,7 @@ const Contact = ({ setShowModal, showModal, setShowModalError, showModalError, e
         <ContactContainer id="contact">
             <ContactWrap >
                 <ContactForm noValidate autoComplete="off">
-                    <ContactH1>{textData[0].title}</ContactH1>
+                    <ContactH1>{textData.title}</ContactH1>
                     <TextField
                         className={windowWidth > 500 ? classes.input : classesSmallScreen.input}
                         {...(error ? { error } : {})}
@@ -154,7 +154,6 @@ const Contact = ({ setShowModal, showModal, setShowModalError, showModalError, e
                         variant="outlined"
                     />
                     {loading && <LoadingIcon />}
-
                     {sendButton &&
                         <SendButtonWrap onClick={hangleSubmit}>
                             <SendCard />
