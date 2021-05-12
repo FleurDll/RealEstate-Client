@@ -13,7 +13,7 @@ const SideBar = ({ isOpen, toggle }) => {
                     <SidebarLink to="estimation" offset={-80} onClick={toggle}>Estimation</SidebarLink>
                     <SidebarLink to="aPropos" offset={-80} onClick={toggle}>A Propos</SidebarLink>
                     <SidebarLink to="contact" offset={-80} onClick={toggle}>Contact</SidebarLink>
-                    <SidebarLink to="tarif" offset={-80} onClick={toggle}>Honoraires</SidebarLink>
+                    {/* <SidebarLink to="tarif" offset={-80} onClick={toggle}>Honoraires</SidebarLink> */}
                 </SidebarMenu>
             </SidebarWrapper>
         </SidebarContainer>
