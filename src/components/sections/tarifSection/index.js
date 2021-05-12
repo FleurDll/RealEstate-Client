@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from "../../../client";
-import { TarifContainer, TarifHeading, TarifImgWrapper, TarifImage } from "./TarifElements";
+import { TarifContainer, TarifHeadingWrapper, TarifHeading, TarifImgWrapper, TarifImage, LogoHappyImmo } from "./TarifElements";
 
 const Tarif = () => {
     const [textData, setTextData] = useState(null);
@@ -18,9 +18,12 @@ const Tarif = () => {
 
     return (
         <TarifContainer id="honoraires">
-            <TarifHeading>{textData.titre}</TarifHeading>
+            <TarifHeadingWrapper>
+                <TarifHeading>{textData.titre}</TarifHeading>
+                <LogoHappyImmo src="images/logo/happy-immo-logo-sans-bg.png" alt="logo Happy-Immo" />
+            </TarifHeadingWrapper>
             <TarifImgWrapper>
-                <TarifImage src="images/tarif2.png" alt="tarif" />
+                <TarifImage src="images/tarif5.png" alt="tarif" />
             </TarifImgWrapper>
         </TarifContainer>
     );

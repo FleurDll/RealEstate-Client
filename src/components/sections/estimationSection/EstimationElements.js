@@ -75,8 +75,20 @@ export const EstimationDescription = styled.p`
     }
 `;
 
+export const EstimationProposition = styled.p`
+    margin-top: 30px;
+    font-size: ${SIZE.subtitle};
+    line-height: 24px;
+    color: ${COLORS.darkGrey};
+
+    @media screen and (max-width: 480px) {
+        font-size: ${SIZE.subtitle480};
+    }
+`;
+
 export const EstimationContactWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
 `;

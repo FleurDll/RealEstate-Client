@@ -13,8 +13,13 @@ export const TarifContainer = styled.div`
     }
 `;
 
+export const TarifHeadingWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+`;
+
 export const TarifHeading = styled.p`
-    margin: 0 0 24px 0;
     font-size: ${SIZE.heading};
     font-weight: 600;
     color: ${COLORS.darkBlue};
@@ -31,9 +36,19 @@ export const TarifImgWrapper = styled.div`
 `;
 
 export const TarifImage = styled.img`
-    max-width: 440px;
+    max-width: 720px;
+
+    @media screen and (max-width: 768px) {
+        max-width: 450px;
+    }
 
     @media screen and (max-width: 480px) {
         max-width: 290px;
     }
+`;
+
+export const LogoHappyImmo = styled.img`
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
 `;

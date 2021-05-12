@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import sanityClient from "../../../client";
 import EstimationCriteres from './estimationCriteres';
 import PhoneCard from "../../cards/phoneCard";
-import { EstimationContainer, EstimationWrapper, EstimationImage, ColumnLeft, ColumnRight, EstimationTitle, EstimationText, EstimationDescription, EstimationContactWrapper } from "./EstimationElements";
+import EmailCard from "../../cards/emailCard";
+import { EstimationContainer, EstimationWrapper, EstimationImage, ColumnLeft, ColumnRight, EstimationTitle, EstimationText, EstimationDescription, EstimationContactWrapper, EstimationProposition } from "./EstimationElements";
 
 const Estimation = () => {
     const [textData, setTextData] = useState(null);
@@ -44,8 +45,10 @@ const Estimation = () => {
                         {textData.criteres3 && <EstimationCriteres text={textData.criteres3} />}
                         {textData.criteres4 && <EstimationCriteres text={textData.criteres4} />}
                     </EstimationText>
+                    <EstimationProposition>Contactez-moi pour une estimation gratuite.</EstimationProposition>
                     <EstimationContactWrapper>
                         <PhoneCard />
+                        <EmailCard />
                     </EstimationContactWrapper>
                 </ColumnRight>
             </EstimationWrapper>
