@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
+import { COLORS, SECTION } from "../../../constantsStyles";
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 
 export const Nav = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? "#0076b3" : "transparent")};
+    background: ${({ scrollNav }) => (scrollNav ? `${COLORS.mainBlue}` : "transparent")};
 
-    background: ${({ slug }) => (slug !== "/" && "#0076b3")};
+    background: ${({ slug }) => (slug !== "/" && `${COLORS.mainBlue}`)};
 
     color: #fff;
 
@@ -31,10 +32,10 @@ export const NavContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 80px;
-    z-index: 1;
-    width: 100%;
+    z-index: ${SECTION.zIndex};
+    width: ${SECTION.width};
     padding: 0 24px;
-    max-width: 1100px;
+    max-width: ${SECTION.maxWidth};
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -42,7 +43,6 @@ export const NavLogo = styled(LinkR)`
     justify-self: flex-start;
     align-items: center;
     color: #fff;
-    ${'' /* color: #ff6584; */}
     cursor: pointer;
     font-size: 1.5rem;
     margin-left: 24px;
@@ -83,7 +83,6 @@ export const NavItem = styled.li`
 
 export const styledLink = css`
     color: #fff;
-    ${'' /* color: #ff6584; */}
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -92,7 +91,7 @@ export const styledLink = css`
     cursor: pointer;
 
     &.active {
-        border-bottom: 3px solid #FF6584;
+        border-bottom: 3px solid ${COLORS.mainPink};
     }
 `;
 

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import Biens from '../components/sections/biensSection';
+import Navbar from '../components/navigation/navbar';
+import Sidebar from "../components/navigation/sidebar";
 import HeroSection from '../components/sections/heroSection';
+import Biens from '../components/sections/biensSection';
 import Estimation from "../components/sections/estimationSection";
 import APropos from '../components/sections/aProposSection';
 import Contact from '../components/sections/contactSection';
 import Modal from "../components/modal";
-import Navbar from '../components/navigation/navbar';
-import Sidebar from "../components/navigation/sidebar";
+
 import Tarif from '../components/sections/tarifSection';
 
 const Home = ({ emailJSKey }) => {
