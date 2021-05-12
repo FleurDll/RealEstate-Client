@@ -3,7 +3,7 @@ import sanityClient from "../../../client";
 import EstimationCriteres from './estimationCriteres';
 import PhoneCard from "../../cards/phoneCard";
 import EmailCard from "../../cards/emailCard";
-import { EstimationContainer, EstimationWrapper, EstimationImage, ColumnLeft, ColumnRight, EstimationTitle, EstimationText, EstimationDescription, EstimationContactWrapper, EstimationProposition } from "./EstimationElements";
+import { EstimationContainer, EstimationWrapper, EstimationImage, ColumnLeft, ColumnRight, EstimationTitle, EstimationText, EstimationDescription, EstimationContactWrapper, EstimationProposition, EmailCardWrapper } from "./EstimationElements";
 
 const Estimation = () => {
     const [textData, setTextData] = useState(null);
@@ -48,7 +48,9 @@ const Estimation = () => {
                     <EstimationProposition>Contactez-moi pour une estimation gratuite.</EstimationProposition>
                     <EstimationContactWrapper>
                         <PhoneCard />
-                        <EmailCard />
+                        <EmailCardWrapper to="contact" smooth={true} duration={500} spy={true} exact="true" offset={-80} >
+                            <EmailCard />
+                        </EmailCardWrapper>
                     </EstimationContactWrapper>
                 </ColumnRight>
             </EstimationWrapper>

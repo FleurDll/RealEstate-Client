@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
+import { Link as LinkS } from "react-scroll";
 
 export const EstimationContainer = styled.div`
     background: ${COLORS.backgroundGrey};
@@ -91,4 +92,8 @@ export const EstimationContactWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+`;
+
+export const EmailCardWrapper = styled(LinkS)`
+    cursor: pointer;
 `;
