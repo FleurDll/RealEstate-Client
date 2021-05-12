@@ -7,6 +7,7 @@ import Contact from '../components/sections/contactSection';
 import Modal from "../components/modal";
 import Navbar from '../components/navigation/navbar';
 import Sidebar from "../components/navigation/sidebar";
+import Tarif from '../components/sections/tarifSection';
 
 const Home = ({ emailJSKey }) => {
     const [showModal, setShowModal] = useState(false);
@@ -32,6 +33,7 @@ const Home = ({ emailJSKey }) => {
                 setShowModalError={setShowModalError}
                 showModalError={showModalError}
             />
+            <Tarif />
             <Modal
                 title="Message Envoyé !"
                 text="Merci, je vous répondrai au plus vite."

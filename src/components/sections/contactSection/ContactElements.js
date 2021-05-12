@@ -1,24 +1,23 @@
 import styled, { keyframes } from "styled-components";
+import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
 import { VscLoading } from "react-icons/vsc";
-import { BiCheck } from "react-icons/bi";
 
 export const ContactContainer = styled.div`
-    color: #000;
-    background: #F0F2F5;
+    background: ${COLORS.backgroundGrey};
 `;
 
 export const ContactWrap = styled.div`
     display: flex;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 24px;
+    z-index: ${SECTION.zIndex};
+    height: ${SECTION.height};
+    width: ${SECTION.width};
+    max-width: ${SECTION.maxWidth};
+    margin: ${SECTION.margin};
+    padding: ${SECTION.padding};
     justify-content: center;
 
     @media screen and (max-width: 768px) {
-        padding: 40px 10px;
+        padding: ${SECTION.padding768}
     }
 `;
 
@@ -30,11 +29,11 @@ export const ContactForm = styled.form`
 
 export const ContactH1 = styled.h1`
     margin: 10px;
-    color: #383838;
-    font-size: 48px;
+    font-size: ${SIZE.heading};
+    color: ${COLORS.darkBlue};
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: ${SIZE.heading480};
     }
 `;
 
@@ -44,24 +43,9 @@ const spin = keyframes`
 
 export const LoadingIcon = styled(VscLoading)`
     margin-top: 20px;
-    font-size: 35px;
-    color: #484848;
-    animation: ${spin} 2s linear infinite;
-`;
-
-const validate = keyframes`
-    to {transform: rotate(360deg)}
-`;
-
-export const ConfirmIcon = styled(BiCheck)`
-    border: solid;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #4ae491,  #28a745);
-    ${'' /* background: #28a745; */}
-    margin-top: 20px;
     font-size: 50px;
-    color: #fff;
-    animation: ${validate} 0.8s linear;
+    color: ${COLORS.mainPink};
+    animation: ${spin} 2s linear infinite;
 `;
 
 export const SendButtonWrap = styled.div``;

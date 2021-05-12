@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { COLORS, SIZE } from "../../../../constantsStyles";
 import { RiArrowDropRightFill } from "react-icons/ri";
 
 export const CritereWrapper = styled.div`
@@ -8,14 +9,13 @@ export const CritereWrapper = styled.div`
 `;
 
 export const ArrowPink = styled(RiArrowDropRightFill)`
-    color: #FF6584;
+    color: ${COLORS.mainPink};
     font-size: 30px;
 `;
 
 export const Critere = styled.p`
     max-width: 440px;
     margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 24px;
-    color: #010606;
+    font-size: ${SIZE.subtitle};
+    color: ${COLORS.darkGrey};
 `;

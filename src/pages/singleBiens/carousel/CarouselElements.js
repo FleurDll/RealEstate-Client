@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { COLORS } from "../../../constantsStyles";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 export const CarouselWrapper = styled.div`
@@ -36,6 +37,7 @@ const arrowButtons = css`
     color: #fff;
     cursor: pointer;
     background: #000d1a;
+    ${'' /* background: ${COLORS.mainBlue}; */}
     border-radius: 50px;
     padding: 10px;
     margin: 20px 1rem 20px ;
@@ -43,7 +45,7 @@ const arrowButtons = css`
     transition: 0.3s;
 
     &:hover {
-        background: #0076b3;
+        background: ${COLORS.mainBlue};
         transform: scale(1.05);
     }
 `;

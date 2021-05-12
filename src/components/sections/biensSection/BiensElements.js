@@ -1,23 +1,23 @@
 import styled from "styled-components";
+import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
 import { Link as LinkR } from "react-router-dom";
 
 export const HousesContainer = styled.div`
-    color: #000;
-    background: #fff;
+    background: ${COLORS.backgroundWhite};
 `;
 
 export const HousesWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    z-index: 1;
-    width: 100%;
-    max-width: 1100px;
-    padding: 60px 24px;
+    margin: ${SECTION.margin};
+    z-index: ${SECTION.zIndex};
+    width: ${SECTION.width};
+    max-width: ${SECTION.maxWidth};
+    padding: ${SECTION.padding};
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        padding: 40px 10px;
+        padding: ${SECTION.padding};
         max-width: 480px;
     }
 
@@ -31,7 +31,7 @@ export const HouseLink = styled(LinkR)`
     margin: 15px;
     text-decoration: none;
     box-shadow: rgb(0 0 0 / 30%) 0px 0.0625rem 0.1875rem 0px;
-    border-radius: 0.1875rem;
+    border-radius: ${SIZE.borderRadius};
 
     &:hover {
         background: rgba(0,0,0,0.1);
@@ -44,5 +44,3 @@ export const HouseAnnonce = styled.div`
     grid-template-rows: 1fr 0.15fr;
     letter-spacing: 0.5px;
 `;
-
-

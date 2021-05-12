@@ -1,21 +1,21 @@
 import styled from "styled-components";
+import { SECTION, COLORS, SIZE, CARD } from "../../constantsStyles";
 
 export const BiensContainer = styled.div`
-    
 `;
 
 export const BiensWrapper = styled.div`
     display: grid;
     grid-template-rows: 1fr 0.6fr;
     grid-template-columns: 2fr 1fr;
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    max-width: 1100px;
+    z-index: ${SECTION.zIndex};
+    width: ${SECTION.width};
+    height: ${SECTION.height};
+    max-width: ${SECTION.maxWidth};
     margin: 110px auto;
     padding: 30px 5px;
     justify-content: center;
-    box-shadow: rgb(0 0 0 / 30%) 0px 0.0625rem 0.1875rem 0px;
+    box-shadow: ${CARD.boxShadow};
 
     @media screen and (max-width: 768px) {
         grid-template-rows: 1fr 0.1fr 0.1fr 0.1fr 0.1fr;
@@ -40,11 +40,12 @@ export const ContactCard = styled.div`
 
 export const ContactCardTitle = styled.div`
     margin: 10px;
-    font-size: 18px;
+    color: ${COLORS.darkBlue};
+    font-size: ${SIZE.subtitle};
 `;
 
 export const TextDescription = styled.div`
-    color: grey;
+    color: ${COLORS.darkGrey};
     margin: 40px 15px;
     letter-spacing: 0.5px;
     line-height: 26px;

@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
 
 export const HeroContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
-    background: #0c0c0c;
+    background: ${COLORS.backgroundWhite};
     color: #fff;
     padding: 0 30px;
     position: relative;
-    z-index: 1;
+    z-index: ${SECTION.zIndex};
 
     :before {
         content: "";
@@ -58,7 +59,7 @@ export const HeroContent = styled.div`
 
 export const HeroTitle = styled.div`
     color: #fff;
-    font-size: 48px;
+    font-size: ${SIZE.heading};
     text-align: center;
     padding-top: 30px;
 
@@ -67,7 +68,7 @@ export const HeroTitle = styled.div`
     }
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: ${SIZE.heading480};
     }
 `;
 
@@ -78,10 +79,6 @@ export const HeroContactWrapper = styled.div`
 ////////////////////// NO DATA
 
 export const NoDataContainer = styled.div`
-    ${'' /* position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100%; */}
     background : #0076b3;
     top: 0;
     left: 0;

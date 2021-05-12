@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { COLORS } from "../../../constantsStyles";
 import { IoPricetagOutline } from "react-icons/io5";
 import { GoLocation } from "react-icons/go";
 import { BiBed, BiBath, BiBuildingHouse } from "react-icons/bi";
@@ -7,13 +8,13 @@ import { GiHomeGarage } from "react-icons/gi";
 import { AiOutlineCar } from "react-icons/ai";
 
 export const DetailsContainer = styled.div`
-    ${'' /* padding: 30px 0; */}
 `;
 
 export const Title = styled.div`
     text-align: center;
     font-weight: bold;
-    color: #708090;
+    ${'' /* color: #708090; */}
+    color: ${COLORS.middleGrey};
     margin: 20px auto 30px;
     font-size: 20px;
 `;
@@ -35,7 +36,6 @@ export const DetailsItem = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
 `;
 
 export const Text = styled.p`
@@ -45,7 +45,7 @@ export const Text = styled.p`
 export const Separation = styled.div`
     height: 200px;
     width: 2px;
-    background-color: #FF6584;
+    background-color: ${COLORS.mainPink};
     margin: auto;
 
     @media screen and (max-width: 768px) {

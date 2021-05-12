@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { COLORS } from "../../../../constantsStyles";
 import { BiBed, BiBath } from "react-icons/bi";
 // eslint-disable-next-line no-unused-vars
 import { GiHomeGarage } from "react-icons/gi";
@@ -14,12 +15,12 @@ export const BiensBottomContainer = styled.div`
 export const Description = styled.div`
     display: flex;
     justify-content: space-between;
-    color: #696969;
+    color: ${COLORS.lightGrey};
     margin: 5px;  
 `;
 
 export const Title = styled.h1`
-    color: #505050;
+    color: ${COLORS.middleGrey};
     font-weight: bold;
     font-size: 18px;
 

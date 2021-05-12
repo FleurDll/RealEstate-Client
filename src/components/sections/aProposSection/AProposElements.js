@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
 import { Link as LinkS } from "react-scroll";
 
 export const AProposContainer = styled.div`
     color: #000;
-    background: #fff;
+    background: ${COLORS.backgroundWhite};
 `;
 
 export const AProposWrapper = styled.div`
@@ -11,17 +12,17 @@ export const AProposWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 60px 24px;
+    z-index: ${SECTION.zIndex};
+    height: ${SECTION.height};
+    width: ${SECTION.width};
+    max-width: ${SECTION.maxWidth};
+    margin: ${SECTION.margin};
+    padding: ${SECTION.padding};
     justify-content: center;
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        padding: 40px 10px;
+        padding: ${SECTION.padding768};
     }
 `;
 
@@ -41,7 +42,7 @@ export const TopLine = styled.div`
 `;
 
 export const TopLineText = styled.div`
-    color: #0076b3;
+    color: ${COLORS.mainBlue};
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -57,25 +58,25 @@ export const LogoHappyImmo = styled.img`
 
 export const Heading = styled.div`
     margin: 12px 0 24px 0;
-    font-size: 48px;
+    font-size: ${SIZE.heading};
+    color: ${COLORS.darkBlue};
     line-height: 1.1;
     font-weight: 600;
-    color: "#f7f8fa";
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: ${SIZE.heading480};
     }
 `;
 
 export const Subtitle = styled.div`
     max-width: 440px;
     margin-bottom: 35px;
-    font-size: 18px;
+    font-size: ${SIZE.subtitle};
     line-height: 24px;
-    color: #383838;
+    color: ${COLORS.darkGrey};
 
     @media screen and (max-width: 480px) {
-        font-size: 16px;
+        font-size: ${SIZE.subtitle480};
     }
 `;
 
@@ -86,19 +87,16 @@ export const EmailCardWrapper = styled(LinkS)`
 `;
 
 export const ProfileImageWrapper = styled.div`
-    
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 `;
 
 export const ProfileImage = styled.img`
     width: 80%;
     margin: 0 0 10px 0;
     padding-right: 0;
-    border-radius: 0.1875rem;
+    border-radius: ${SIZE.borderRadius};
 
     @media screen and (max-width: 768px) {
         width: 60%;

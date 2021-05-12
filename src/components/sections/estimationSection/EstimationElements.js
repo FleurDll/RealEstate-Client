@@ -1,24 +1,25 @@
 import styled, { css } from "styled-components";
+import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
 
 export const EstimationContainer = styled.div`
-    background: #F0F2F5;
+    background: ${COLORS.backgroundGrey};
 `;
 
 export const EstimationWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    z-index: 1;
-    height: auto;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0px auto;
-    padding: 60px 24px;
+    z-index: ${SECTION.zIndex};
+    height: ${SECTION.height};
+    width: ${SECTION.width};
+    max-width: ${SECTION.maxWidth};
+    margin: ${SECTION.margin};
+    padding: ${SECTION.padding};
     justify-content: center;
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        padding: 40px 10px;
+        padding: ${SECTION.padding768};
     }
 `;
 
@@ -39,7 +40,8 @@ export const ColumnRight = styled.div`
 
 export const EstimationImage = styled.img`
     width: 100%;
-    border-radius: 0.1875rem;
+    border-radius: ${SIZE.borderRadius};
+    padding: 0 20px;
 
     @media screen and (max-width: 768px) {
         width: 60%;
@@ -48,25 +50,24 @@ export const EstimationImage = styled.img`
 `;
 
 export const EstimationTitle = styled.h1`
-    color: #0076b3;
-    font-size: 38px;
+    color: ${COLORS.darkBlue};
+    font-size: ${SIZE.heading};
     font-weight: 700;
     letter-spacing: 1.4px;
-    text-transform: uppercase;
     margin-bottom: 28px;
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: ${SIZE.heading480};
     }
 `;
 
 export const EstimationText = styled.div`
-    color: #383838;
+    color: ${COLORS.darkGrey};
 `;
 
 export const EstimationDescription = styled.p`
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: ${SIZE.subtitle};
     line-height: 24px;
 `;
 
