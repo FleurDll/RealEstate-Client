@@ -3,7 +3,7 @@ import { TarifContainer, TarifHeading, TarifImgWrapper, TarifImage } from "./Tar
 
 const Tarif = () => {
     return (
-        <TarifContainer>
+        <TarifContainer id="tarif">
             <TarifHeading>Honoraires</TarifHeading>
             <TarifImgWrapper>
                 <TarifImage src="images/tarif2.png" alt="tarif" />

@@ -32,4 +32,8 @@ export const TarifImgWrapper = styled.div`
 
 export const TarifImage = styled.img`
     max-width: 440px;
+
+    @media screen and (max-width: 480px) {
+        max-width: 290px;
+    }
 `;
