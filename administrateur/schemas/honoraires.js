@@ -7,6 +7,11 @@ export default {
             name: 'titre',
             title: 'Titre',
             type: 'string',
+        },
+        {
+            name: 'source',
+            title: 'Source',
+            type: 'string',
         }
     ]
 }
