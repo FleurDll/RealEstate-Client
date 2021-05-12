@@ -12,6 +12,7 @@ import estimation from "./estimation";
 import aPropos from "./aPropos";
 import contact from "./contact";
 import infoPerso from "./infoPerso";
+import honoraires from "./honoraires";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,6 +30,7 @@ export default createSchema({
     enTete,
     estimation,
     aPropos,
-    contact
+    contact,
+    honoraires,
   ]),
 })
