@@ -44,7 +44,7 @@ export const EstimationImage = styled.img`
     padding: 0 20px;
 
     @media screen and (max-width: 768px) {
-        width: 60%;
+        width: 90%;
         margin-bottom: 20px;
     }
 `;
@@ -69,6 +69,10 @@ export const EstimationDescription = styled.p`
     margin-bottom: 15px;
     font-size: ${SIZE.subtitle};
     line-height: 24px;
+
+    @media screen and (max-width: 480px) {
+        font-size: ${SIZE.subtitle480};
+    }
 `;
 
 export const EstimationContactWrapper = styled.div`

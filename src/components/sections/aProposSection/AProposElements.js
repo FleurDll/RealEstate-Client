@@ -72,7 +72,8 @@ export const Subtitle = styled.div`
     max-width: 440px;
     margin-bottom: 35px;
     font-size: ${SIZE.subtitle};
-    line-height: 24px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
     color: ${COLORS.darkGrey};
 
     @media screen and (max-width: 480px) {

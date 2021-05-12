@@ -18,4 +18,8 @@ export const Critere = styled.p`
     margin-bottom: 15px;
     font-size: ${SIZE.subtitle};
     color: ${COLORS.darkGrey};
+
+    @media screen and (max-width: 480px) {
+        font-size: ${SIZE.subtitle480};
+    }
 `;
