@@ -21,7 +21,7 @@ const HeroSection = () => {
 
         setTimeout(() => {
             setShowNoDataContainer(true);
-        }, 1000);
+        }, 4 * 1000);
 
         return (
             <NoDataContainer>

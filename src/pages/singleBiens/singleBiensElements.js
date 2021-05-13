@@ -12,7 +12,7 @@ export const BiensWrapper = styled.div`
     width: ${SECTION.width};
     height: ${SECTION.height};
     max-width: ${SECTION.maxWidth};
-    margin: 110px auto;
+    margin: 90px auto;
     padding: 30px 5px;
     justify-content: center;
     box-shadow: ${CARD.boxShadow};
@@ -23,7 +23,11 @@ export const BiensWrapper = styled.div`
     }
 `;
 
-export const Column = styled.div``;
+export const Column = styled.div`
+    @media screen and (max-height: 680px) {
+        height: 480px;
+    }
+`;
 
 export const Details = styled.div``;
 
@@ -55,10 +59,15 @@ export const DPEImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-height: 680px) {
+        margin-top: 30px;
+    }
 `;
 
 export const DPEImg = styled.img`
     @media screen and (max-width: 480px) {
         max-width: 200px;
     }
+
 `;

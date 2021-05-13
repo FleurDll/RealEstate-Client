@@ -25,6 +25,10 @@ export const Images = styled.img`
     object-fit: cover;
     box-shadow: rgb(0 0 0 / 50%) 0px 0.0625rem 0.1875rem 0px;
     border-radius: 8px;
+
+    @media screen and (max-height: 680px) {
+        height: 350px;
+    }
 `;
 
 export const SliderButtons = styled.div`
