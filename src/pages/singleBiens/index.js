@@ -41,13 +41,17 @@ const SingleBiens = ({ match }) => {
 
     if (!singleHouse) return <div></div>;
 
+    let allImages = [];
+
+    allImages = singleHouse.imagesGallery.concat(singleHouse.mainImage);
+
     return (
         <>
             <Navbar />
             <BiensContainer>
                 <BiensWrapper>
                     <Column>
-                        <Carousel imagesGallery={singleHouse.imagesGallery} />
+                        <Carousel imagesGallery={allImages} />
                     </Column>
                     <Column>
                         <Details singleHouse={singleHouse} />

@@ -18,6 +18,8 @@ const Footer = () => {
             .catch(console.error);
     }, []);
 
+    const currentYear = new Date().getFullYear();
+
     if (!textData) return (
         <FooterContainer>
             <FooterWrap>
@@ -29,7 +31,7 @@ const Footer = () => {
                     <a href="https://www.facebook.com/ameliedufourhappyimmo" rel="noreferrer" target="_blank"><FacebookIcon /></a>
                     <a href="https://www.instagram.com/dufete/" rel="noreferrer" target="_blank"><InstagramIcon /></a>
                 </FooterSocialMedia>
-                <FooterCopyright>Fleur Dalle<CopyrightIcon />2021 All rights reserved.</FooterCopyright>
+                <FooterCopyright>Fleur Dalle<CopyrightIcon />{currentYear} All rights reserved.</FooterCopyright>
             </FooterWrap>
         </FooterContainer>
     );
@@ -45,7 +47,7 @@ const Footer = () => {
                     <a href={textData.facebook} rel="noreferrer" target="_blank"><FacebookIcon /></a>
                     <a href={textData.instagram} rel="noreferrer" target="_blank"><InstagramIcon /></a>
                 </FooterSocialMedia>
-                <FooterCopyright>Fleur Dalle<CopyrightIcon />2021 All rights reserved.</FooterCopyright>
+                <FooterCopyright>Fleur Dalle<CopyrightIcon />{currentYear} All rights reserved.</FooterCopyright>
             </FooterWrap>
         </FooterContainer>
     );

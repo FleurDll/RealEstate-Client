@@ -31,12 +31,16 @@ export const StyledColumn = css`
 `;
 
 export const ColumnLeft = styled.div`
-   ${StyledColumn}
+   ${StyledColumn};
    align-items: center;
 `;
 
 export const ColumnRight = styled.div`
-    ${StyledColumn}
+    ${StyledColumn};
+    @media screen and (max-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
 `;
 
 export const EstimationImage = styled.img`
@@ -56,6 +60,10 @@ export const EstimationTitle = styled.h1`
     font-weight: 700;
     letter-spacing: 1.4px;
     margin-bottom: 28px;
+
+    @media screen and (max-width: 768px) {
+            text-align: center;
+    }
 
     @media screen and (max-width: 480px) {
         font-size: ${SIZE.heading480};
@@ -92,6 +100,12 @@ export const EstimationContactWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+
+    @media screen and (max-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 `;
 
 export const EmailCardWrapper = styled(LinkS)`

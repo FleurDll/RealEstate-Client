@@ -17,6 +17,7 @@ const Estimation = () => {
                 criteres2,
                 criteres3,
                 criteres4,
+                contactPhrase,
                 imageEstimation {
                     asset->{
                         _id, 
@@ -45,7 +46,7 @@ const Estimation = () => {
                         {textData.criteres3 && <EstimationCriteres text={textData.criteres3} />}
                         {textData.criteres4 && <EstimationCriteres text={textData.criteres4} />}
                     </EstimationText>
-                    <EstimationProposition>Contactez-moi pour une estimation gratuite.</EstimationProposition>
+                    <EstimationProposition>{textData.contactPhrase}</EstimationProposition>
                     <EstimationContactWrapper>
                         <PhoneCard />
                         <EmailCardWrapper to="contact" smooth={true} duration={500} spy={true} exact="true" offset={-80} >

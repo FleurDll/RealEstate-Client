@@ -15,22 +15,27 @@ export default {
         },
         {
             name: 'criteres1',
-            title: 'critères 1',
+            title: 'critère 1',
             type: 'string',
         },
         {
             name: 'criteres2',
-            title: 'critères 2',
+            title: 'critère 2',
             type: 'string',
         },
         {
             name: 'criteres3',
-            title: 'critères 3',
+            title: 'critère 3',
             type: 'string',
         },
         {
             name: 'criteres4',
-            title: 'critères 4',
+            title: 'critère 4',
+            type: 'string',
+        },
+        {
+            name: 'contactPhrase',
+            title: 'Phrase prise de contact',
             type: 'string',
         },
         {

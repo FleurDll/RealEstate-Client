@@ -29,6 +29,13 @@ export const AProposWrapper = styled.div`
 export const Column = styled.div`
     margin-bottom: 15px;
     padding: 0 5px;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const TextWrapper = styled.div`
@@ -81,7 +88,14 @@ export const Subtitle = styled.div`
     }
 `;
 
-export const ContactWrapper = styled.div``;
+export const ContactWrapper = styled.div`
+    @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+`;
 
 export const EmailCardWrapper = styled(LinkS)`
     cursor: pointer;

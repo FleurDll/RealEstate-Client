@@ -35,7 +35,7 @@ export const TarifHeading = styled.p`
 export const TarifSubtitle = styled.div`
     display: flex;
     color: ${COLORS.mainBlue};
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-transform: uppercase;
