@@ -9,7 +9,8 @@ const Tarif = () => {
         sanityClient
             .fetch(`*[_type == "honoraires"]{
                 titre,
-                source
+                source,
+                logoHappyImmo
         }`)
             .then((data) => setTextData(data[0]))
             .catch(console.error);
@@ -21,7 +22,9 @@ const Tarif = () => {
         <TarifContainer id="honoraires">
             <TarifHeadingWrapper>
                 <TarifHeading>{textData.titre}</TarifHeading>
-                <TarifSubtitle>{textData.source}<LogoHappyImmo src="images/logo/happy-immo-logo-sans-bg.png" alt="logo Happy-Immo" /></TarifSubtitle>
+                <TarifSubtitle>{textData.source}
+                    {textData.logoHappyImmo === "oui" && <LogoHappyImmo src="images/logo/happy-immo-logo-sans-bg.png" alt="logo Happy-Immo" />}
+                </TarifSubtitle>
             </TarifHeadingWrapper>
             <TarifImgWrapper>
                 <TarifImage src="images/tarif7.png" alt="tarif" />

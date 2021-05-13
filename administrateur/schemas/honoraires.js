@@ -12,6 +12,17 @@ export default {
             name: 'source',
             title: 'Source',
             type: 'string',
-        }
+        },
+        {
+            name: "logoHappyImmo",
+            title: "Afficher Logo Happy Immo ?",
+            type: "string",
+            options: {
+                list: [
+                    { value: "oui", title: "Oui" },
+                    { value: "non", title: "Non" }
+                ],
+            },
+        },
     ]
 }
