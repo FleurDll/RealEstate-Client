@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { SECTION, COLORS, SIZE, CARD } from "../../../constantsStyles";
+import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
 import { Link as LinkS } from "react-scroll";
 
 export const EstimationContainer = styled.div`
