@@ -5,7 +5,7 @@ import Carousel from "./carousel";
 import Details from "./details";
 import PhoneCard from "../../components/cards/phoneCard";
 
-import { BiensContainer, BiensWrapper, ContactCard, ContactCardTitle, TextDescription, DPEImageWrapper, DPEImg, Column } from "./singleBiensElements";
+import { BiensContainer, BiensWrapper, ContactCard, ContactCardTitle, TextDescription, DPEImageWrapper, DPEImg, Column, ColumnCarousel } from "./singleBiensElements";
 import Navbar from '../../components/navigation/navbar';
 
 const SingleBiens = ({ match }) => {
@@ -27,6 +27,7 @@ const SingleBiens = ({ match }) => {
             prix,
             garage,
             dpe,
+            ges,
             body,
             mainImage{
                 asset->{
@@ -50,14 +51,14 @@ const SingleBiens = ({ match }) => {
             <Navbar />
             <BiensContainer>
                 <BiensWrapper>
-                    <Column>
+                    <ColumnCarousel>
                         <Carousel imagesGallery={allImages} />
-                    </Column>
+                    </ColumnCarousel>
                     <Column>
                         <Details singleHouse={singleHouse} />
                         {singleHouse.statut === "1" &&
                             <ContactCard>
-                                <ContactCardTitle>Des Question ? Une Visite ?</ContactCardTitle>
+                                <ContactCardTitle>Des Questions ? Une Visite ?</ContactCardTitle>
                                 <PhoneCard />
                             </ContactCard>
                         }
@@ -70,7 +71,12 @@ const SingleBiens = ({ match }) => {
                     <Column>
                         <DPEImageWrapper>
                             {singleHouse.dpe &&
-                                <DPEImg src={`../../../images/dpe/dpe-${singleHouse.dpe}.png`} alt="dpe" />
+                                <DPEImg src={`/images/dpe/dpe-${singleHouse.dpe}.png`} alt="dpe" />
+                            }
+                        </DPEImageWrapper>
+                        <DPEImageWrapper>
+                            {singleHouse.ges &&
+                                <DPEImg src={`/images/gas/GAS${singleHouse.ges}.png`} alt="ges" />
                             }
                         </DPEImageWrapper>
                     </Column>

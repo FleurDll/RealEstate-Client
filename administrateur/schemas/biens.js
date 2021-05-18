@@ -93,7 +93,7 @@ export default {
         },
         {
             name: "dpe",
-            title: "DPE",
+            title: "Diagnostic Performance Energétique",
             type: "string",
             options: {
                 list: [
@@ -106,11 +106,21 @@ export default {
                 ],
             },
         },
-        /* {
-          name: "superficie",
-          title: "Superficie",
-          type: "number"
-        }, */
+        {
+            name: "ges",
+            title: "Gaz à Effet de Serre",
+            type: "string",
+            options: {
+                list: [
+                    { value: "A", title: "A" },
+                    { value: "B", title: "B" },
+                    { value: "C", title: "C" },
+                    { value: "D", title: "D" },
+                    { value: "E", title: "E" },
+                    { value: "G", title: "G" },
+                ],
+            },
+        },
         {
             name: 'body',
             title: 'Description du Bien',

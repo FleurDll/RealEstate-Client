@@ -24,8 +24,11 @@ export const BiensWrapper = styled.div`
 `;
 
 export const Column = styled.div`
+`;
+
+export const ColumnCarousel = styled.div`
     @media screen and (max-height: 680px) {
-        ${'' /* height: 480px; */}
+        height: 480px;
     }
 `;
 
@@ -59,6 +62,7 @@ export const DPEImageWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 
     @media screen and (max-height: 680px) {
         margin-top: 30px;

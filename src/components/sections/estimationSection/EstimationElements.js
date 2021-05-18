@@ -45,8 +45,6 @@ export const ColumnRight = styled.div`
 
 export const EstimationImage = styled.img`
     width: 100%;
-    ${'' /* border: solid ${COLORS.mainBlue};
-    borderRadius: ${CARD.borderRadius}; */}
 
     @media screen and (max-width: 768px) {
         width: 90%;
