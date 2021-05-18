@@ -55,7 +55,7 @@ const SingleBiens = ({ match }) => {
                     </Column>
                     <Column>
                         <Details singleHouse={singleHouse} />
-                        {singleHouse.statut === "aVendre" &&
+                        {singleHouse.statut === "1" &&
                             <ContactCard>
                                 <ContactCardTitle>Des Question ? Une Visite ?</ContactCardTitle>
                                 <PhoneCard />

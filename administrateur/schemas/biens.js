@@ -23,9 +23,9 @@ export default {
             type: "string",
             options: {
                 list: [
-                    { value: "vendu", title: "Vendu" },
-                    { value: "aVendre", title: "A Vendre" },
-                    { value: "sousCompromis", title: "Sous Compromis" },
+                    { value: "3", title: "Vendu" },
+                    { value: "1", title: "A Vendre" },
+                    { value: "2", title: "Sous Compromis" },
                 ],
             },
         },

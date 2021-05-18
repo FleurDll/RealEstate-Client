@@ -31,26 +31,16 @@ const Biens = () => {
             .catch(console.error);
     }, []);
 
-    const newList = [];
-
     if (!housesData) return <div></div>;
 
-    housesData.forEach(house => {
-        if (house.statut === "aVendre") {
-            newList.splice(0, 0, house);
-        } else if (house.statut === "sousCompromis") {
-            newList.splice(1, 0, house);
-        } else if (house.statut === "venduAuPrix") {
-            newList.splice(2, 0, house);
-        } else if (house.statut === "vendu") {
-            newList.splice(3, 0, house);
-        }
+    housesData.sort(function (a, b) {
+        return a.statut - b.statut;
     });
 
     return (
         <HousesContainer id="biens" >
             <HousesWrapper >
-                {newList && newList.map((house) => {
+                {housesData && housesData.map((house) => {
                     return (
                         <HouseLink to={`/biens/${house.slug.current}`} key={house.slug.current}>
                             <HouseAnnonce>

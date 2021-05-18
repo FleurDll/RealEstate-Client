@@ -45,8 +45,6 @@ export const ColumnRight = styled.div`
 
 export const EstimationImage = styled.img`
     width: 100%;
-    border-radius: ${SIZE.borderRadius};
-    padding: 0 20px;
 
     @media screen and (max-width: 768px) {
         width: 90%;
