@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { SECTION, COLORS, SIZE } from "../../../constantsStyles";
+import { SECTION, COLORS, SIZE, CARD } from "../../../constantsStyles";
 import { Link as LinkS } from "react-scroll";
 
 export const EstimationContainer = styled.div`
@@ -45,6 +45,8 @@ export const ColumnRight = styled.div`
 
 export const EstimationImage = styled.img`
     width: 100%;
+    ${'' /* border: solid ${COLORS.mainBlue};
+    borderRadius: ${CARD.borderRadius}; */}
 
     @media screen and (max-width: 768px) {
         width: 90%;

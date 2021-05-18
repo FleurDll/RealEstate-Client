@@ -25,7 +25,7 @@ export const BiensWrapper = styled.div`
 
 export const Column = styled.div`
     @media screen and (max-height: 680px) {
-        height: 480px;
+        ${'' /* height: 480px; */}
     }
 `;
 
