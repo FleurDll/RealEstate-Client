@@ -24,5 +24,13 @@ export default {
                 ],
             },
         },
+        {
+            name: 'imageHonoraires',
+            title: 'Image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            }
+        }
     ]
 }

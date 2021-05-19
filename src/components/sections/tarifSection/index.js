@@ -10,7 +10,13 @@ const Tarif = () => {
             .fetch(`*[_type == "honoraires"]{
                 titre,
                 source,
-                logoHappyImmo
+                logoHappyImmo,
+                imageHonoraires {
+                    asset->{
+                        _id, 
+                        url
+                    }
+                }
         }`)
             .then((data) => setTextData(data[0]))
             .catch(console.error);
@@ -27,7 +33,7 @@ const Tarif = () => {
                 </TarifSubtitle>
             </TarifHeadingWrapper>
             <TarifImgWrapper>
-                <TarifImage src="images/tarif7.png" alt="tarif" />
+                <TarifImage src={textData.imageHonoraires.asset.url} alt="tarif" />
             </TarifImgWrapper>
         </TarifContainer>
     );
