@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import sanityClient from "../../client";
+import sanityClient from "../../../client";
 import { FooterTitle, FooterWrap, FooterContactInfo, FooterContainer, FooterCopyright, FooterSocialMedia, CopyrightIcon, FacebookIcon, InstagramIcon } from "./FooterElements";
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
     if (!textData) return (
         <FooterContainer>
             <FooterWrap>
-                <img style={{ width: "55px", borderRadius: "10px" }} alt="logo" src="images/logo/logo2-sans-bg.png" />
+                <img style={{ width: "55px", borderRadius: "10px" }} alt="logo" src="/images/logo/logo2-sans-bg.png" />
                 <FooterTitle>Amélie Dufour</FooterTitle>
                 <FooterContactInfo>amelie.dufour@happy-immo.fr</FooterContactInfo>
                 <FooterContactInfo>06 52 12 00 20</FooterContactInfo>
@@ -39,7 +39,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterWrap>
-                <img style={{ width: "55px", borderRadius: "10px" }} alt="logo" src="images/logo/logo2-sans-bg.png" />
+                <img style={{ width: "55px", borderRadius: "10px" }} alt="logo" src="/images/logo/logo2-sans-bg.png" />
                 <FooterTitle>{textData.nom}</FooterTitle>
                 <FooterContactInfo>{textData.email}</FooterContactInfo>
                 <FooterContactInfo>{textData.phone}</FooterContactInfo>
