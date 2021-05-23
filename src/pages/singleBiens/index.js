@@ -44,16 +44,18 @@ const SingleBiens = ({ match }) => {
 
     let allImages = [];
 
-    allImages = singleHouse.imagesGallery.concat(singleHouse.mainImage);
+    if (singleHouse.imagesGallery !== null) allImages = singleHouse.imagesGallery.concat(singleHouse.mainImage);
 
     return (
         <>
             <Navbar />
             <BiensContainer>
                 <BiensWrapper>
-                    <ColumnCarousel>
-                        <Carousel imagesGallery={allImages} />
-                    </ColumnCarousel>
+                    {allImages &&
+                        <ColumnCarousel>
+                            <Carousel imagesGallery={allImages} />
+                        </ColumnCarousel>
+                    }
                     <Column>
                         <Details singleHouse={singleHouse} />
                         {singleHouse.statut === "1" &&

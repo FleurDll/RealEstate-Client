@@ -9,14 +9,19 @@ const Details = ({ singleHouse }) => {
             <Description>
                 <Column>
                     <DetailsItem>
-                        <LocationIcon />
-                        <Text>{singleHouse.localisation}</Text>
+                        {singleHouse.localisation &&
+                            <>
+                                <LocationIcon />
+                                <Text>{singleHouse.localisation}</Text>
+                            </>
+                        }
                     </DetailsItem>
                     <DetailsItem>
-                        <TypeIcon />
-                        <Text>{_.upperFirst(singleHouse.type)}</Text>
+                        {singleHouse.type && <>
+                            <TypeIcon />
+                            <Text>{_.upperFirst(singleHouse.type)}</Text>
+                        </>}
                     </DetailsItem>
-
                     <DetailsItem>
                         {singleHouse.prix &&
                             <>
@@ -29,17 +34,23 @@ const Details = ({ singleHouse }) => {
                 <Separation></Separation>
                 <Column>
                     <DetailsItem>
-                        <GarageIcon />
-                        {/* <Text>{_.upperFirst(singleHouse.garage)}</Text> */}
-                        <Text>{singleHouse.garage === "oui" ? "Avec garage" : "Sans garage"}</Text>
+                        {singleHouse.garage && <>
+                            <GarageIcon />
+                            {/* <Text>{_.upperFirst(singleHouse.garage)}</Text> */}
+                            <Text>{singleHouse.garage === "oui" ? "Avec garage" : "Sans garage"}</Text>
+                        </>}
                     </DetailsItem>
                     <DetailsItem>
-                        <BedroomIcon />
-                        <Text>{singleHouse.chambres}</Text>
+                        {singleHouse.chambres && <>
+                            <BedroomIcon />
+                            <Text>{singleHouse.chambres}</Text>
+                        </>}
                     </DetailsItem>
                     <DetailsItem>
-                        <BathIcon />
-                        <Text>{singleHouse.bathroom}</Text>
+                        {singleHouse.bathroom && <>
+                            <BathIcon />
+                            <Text>{singleHouse.bathroom}</Text>
+                        </>}
                     </DetailsItem>
                 </Column>
             </Description>

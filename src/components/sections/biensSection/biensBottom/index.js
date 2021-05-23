@@ -13,12 +13,12 @@ const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
             </Description>
             <Description>
                 <BottomLeft>
-                    <DescriptionItemType>{_.upperFirst(type)}</DescriptionItemType>
-                    <DescriptionItem><BedroomIcon />{bedroom}</DescriptionItem>
-                    <DescriptionItem><BathIcon />{bathroom}</DescriptionItem>
+                    <DescriptionItemType>{type && `${_.upperFirst(type)}`}</DescriptionItemType>
+                    <DescriptionItem>{bedroom && <><BedroomIcon />{bedroom}</>}</DescriptionItem>
+                    <DescriptionItem>{bathroom && <><BathIcon />{bathroom}</>}</DescriptionItem>
                 </BottomLeft>
                 <BottomRight>
-                    <DescriptionItem>{prix && `${prix}€`} </DescriptionItem>
+                    <DescriptionItem>{prix && `${prix}€`}</DescriptionItem>
                 </BottomRight>
             </Description>
         </BiensBottomContainer>
