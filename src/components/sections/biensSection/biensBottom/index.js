@@ -18,7 +18,7 @@ const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
                     <DescriptionItem><BathIcon />{bathroom}</DescriptionItem>
                 </BottomLeft>
                 <BottomRight>
-                    <DescriptionItem>{prix}€</DescriptionItem>
+                    <DescriptionItem>{prix && `${prix}€`} </DescriptionItem>
                 </BottomRight>
             </Description>
         </BiensBottomContainer>

@@ -16,9 +16,14 @@ const Details = ({ singleHouse }) => {
                         <TypeIcon />
                         <Text>{_.upperFirst(singleHouse.type)}</Text>
                     </DetailsItem>
+
                     <DetailsItem>
-                        <PriceIcon />
-                        <Text>{singleHouse.prix}€</Text>
+                        {singleHouse.prix &&
+                            <>
+                                <PriceIcon />
+                                <Text> {singleHouse.prix}€</Text>
+                            </>
+                        }
                     </DetailsItem>
                 </Column>
                 <Separation></Separation>

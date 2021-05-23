@@ -42,6 +42,7 @@ export default {
                 list: [
                     { value: "appartement", title: "Appartement" },
                     { value: "maison", title: "Maison" },
+                    { value: "maisons", title: "Maisons" },
                     { value: "loft", title: "Loft" },
                     { value: "villa", title: "Villa" },
                     { value: "garage", title: "Garage" },
