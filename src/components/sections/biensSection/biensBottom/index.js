@@ -8,11 +8,11 @@ const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
         <BiensBottomContainer>
             <Description>
                 <Title>{title}</Title>
-                <DescriptionItem><GarageIcon />{_.upperFirst(garage)}</DescriptionItem>
             </Description>
             <Description>
                 <BottomLeft>
                     <DescriptionItemType>{type && `${_.upperFirst(type)}`}</DescriptionItemType>
+                    <DescriptionItem><GarageIcon />{garage}</DescriptionItem>
                     <DescriptionItem>{bedroom && <><BedroomIcon />{bedroom}</>}</DescriptionItem>
                     <DescriptionItem>{bathroom && <><BathIcon />{bathroom}</>}</DescriptionItem>
                 </BottomLeft>
