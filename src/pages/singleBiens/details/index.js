@@ -34,11 +34,8 @@ const Details = ({ singleHouse }) => {
                 <Separation></Separation>
                 <Column>
                     <DetailsItem>
-                        {singleHouse.garage && <>
-                            <GarageIcon />
-                            {/* <Text>{_.upperFirst(singleHouse.garage)}</Text> */}
-                            <Text>{singleHouse.garage === "oui" ? "Avec garage" : "Sans garage"}</Text>
-                        </>}
+                        <GarageIcon />
+                        <Text>{singleHouse.garage}</Text>
                     </DetailsItem>
                     <DetailsItem>
                         {singleHouse.chambres && <>

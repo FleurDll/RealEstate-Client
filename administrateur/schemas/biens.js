@@ -79,11 +79,14 @@ export default {
         {
             name: "garage",
             title: "Garage",
-            type: "string",
+            type: "number",
             options: {
                 list: [
-                    { value: "oui", title: "Oui" },
-                    { value: "non", title: "Non" }
+                    { value: 0, title: "0" },
+                    { value: 1, title: "1" },
+                    { value: 2, title: "2" },
+                    { value: 3, title: "3" },
+                    { value: 4, title: "4" },
                 ],
             },
         },
@@ -103,6 +106,7 @@ export default {
                     { value: "C", title: "C" },
                     { value: "D", title: "D" },
                     { value: "E", title: "E" },
+                    { value: "F", title: "F" },
                     { value: "G", title: "G" },
                 ],
             },

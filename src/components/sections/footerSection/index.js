@@ -45,7 +45,7 @@ const Footer = () => {
                 <FooterContactInfo>{textData.phone}</FooterContactInfo>
                 <FooterSocialMedia>
                     <a href={textData.facebook} rel="noreferrer" target="_blank"><FacebookIcon /></a>
-                    <a href={textData.instagram} rel="noreferrer" target="_blank"><InstagramIcon /></a>
+                    {/* <a href={textData.instagram} rel="noreferrer" target="_blank"><InstagramIcon /></a> */}
                 </FooterSocialMedia>
                 <FooterCopyright>Fleur Dalle<CopyrightIcon />{currentYear} All rights reserved.</FooterCopyright>
             </FooterWrap>

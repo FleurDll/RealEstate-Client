@@ -48,8 +48,6 @@ export const DescriptionItem = styled.div`
 
 export const DescriptionItemType = styled.div`
     ${styledDescriptionItem};
-    ${'' /* border-right: 1px solid #ff6584;
-    border-right: 1px solid #0076b3; */}
     border-right: 1px solid #d5d3da;
     padding-right: 10px;
 `;
