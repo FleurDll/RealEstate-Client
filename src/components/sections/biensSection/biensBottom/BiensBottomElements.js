@@ -16,7 +16,8 @@ export const Description = styled.div`
     display: flex;
     justify-content: space-between;
     color: ${COLORS.lightGrey};
-    margin: 5px;  
+    margin: 5px; 
+    font-size: 14px;
 `;
 
 export const Title = styled.h1`

@@ -141,7 +141,7 @@ export default {
         },
         {
             name: 'imagesGallery',
-            title: 'Images gallery',
+            title: "Galerie d'images",
             type: 'array',
             of: [{ type: 'image' }]
         },
