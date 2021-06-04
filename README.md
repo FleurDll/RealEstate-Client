@@ -1,14 +1,15 @@
-# Flags Game
+# Freelance project : Real Estate
 
 _11/05/21_
 
-## wwww.ameliedufour.com
+## www.ameliedufour.com
 
-Freelance project : Real estate website fully responsive. <br>
+Fully responsive real estate website for a real estate agent. <br>
 My client needed a showcase website to offer her services and exhibit the different homes she sells. <br>
 I chose Sanity for the admin part because it's fully customizable and has instant updates. <br>
 Also, my client is not familiar at all with computers. I had to make sure that she could manage the content of her website herself without difficulty. <br>
-After several appointments, each request of my client was satisfied. I proposed different designs, different logos, to find what suits her best.
+After several appointments, each request of my client was satisfied. I proposed different designs, different logos, to find what suits her best. <br>
+I also wrote a pdf guide with for optimal use of the administrator part.
 
 ## Built With
 
