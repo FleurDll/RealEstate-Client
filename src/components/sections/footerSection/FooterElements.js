@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { BiCopyright } from "react-icons/bi";
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter, IoLogoLinkedin } from "react-icons/io5";
+import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 
 export const FooterContainer = styled.div`
     background: #0076b3;
