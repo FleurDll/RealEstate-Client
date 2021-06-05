@@ -26,7 +26,7 @@ I also wrote a pdf guide with for optimal use of the administrator part.
 ## Sanity Studio - Admin Part
 
 Sanity Studio offers a fully form custimization. This is how I decided to design the schemas : <br>
-Each change automatically updates the website. <br>
+At each changes, it automatically updates the website. <br>
 
 - Personal informations, where my client can change her phone number, email address, facebook link etc.
 - Real estate catalog, creates a new real estate document with all the necessary details (title, location, rooms, price, images, description, etc...)
@@ -35,8 +35,8 @@ Each change automatically updates the website. <br>
 ## Preview
 
 - Desktop<br>
-  ![house](https://user-images.githubusercontent.com/75179031/120815850-82f3bf80-c550-11eb-9926-249cecd935f9.png) <br>
   ![home](https://user-images.githubusercontent.com/75179031/120815897-8d15be00-c550-11eb-83da-2aed45ab6f7f.png) <br>
+  ![house](https://user-images.githubusercontent.com/75179031/120815850-82f3bf80-c550-11eb-9926-249cecd935f9.png) <br>
 
 - Smartphone<br>
   ![smartphone](https://user-images.githubusercontent.com/75179031/120816200-d534e080-c550-11eb-8134-c5428c9d5fbf.png)

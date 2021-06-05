@@ -65,9 +65,3 @@ export const FacebookIcon = styled(IoLogoFacebook)`
 export const InstagramIcon = styled(IoLogoInstagram)`
     ${socialMediaIcon}
 `;
-export const TwitterIcon = styled(IoLogoTwitter)`
-    ${socialMediaIcon}
-`;
-export const LinkedinIcon = styled(IoLogoLinkedin)`
-    ${socialMediaIcon}
-`;
