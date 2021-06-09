@@ -7,9 +7,9 @@ _11/05/21_
 Fully responsive real estate website for a real estate agent. <br>
 My client needed a showcase website to offer her services and exhibit the different homes she sells. <br>
 I chose Sanity for the admin part because it's fully customizable and has instant updates. <br>
-Also, my client is not familiar at all with computers. I had to make sure that she could manage the content of her website herself without difficulty. <br>
-After several appointments, each request of my client was satisfied. I proposed different designs, different logos, to find what suits her best. <br>
-I also wrote a pdf guide with for optimal use of the administrator part.
+Also, my client being not familiar at all with computers, I had to make sure she could manage the content of the website herself without difficulty. <br>
+After several meetings, each request of my client was satisfied. I proposed different designs, different logos, to find what suits her best. <br>
+I also wrote a pdf guide for optimal use of the administrator part.
 
 ## Built With
 
@@ -25,8 +25,9 @@ I also wrote a pdf guide with for optimal use of the administrator part.
 
 ## Sanity Studio - Admin Part
 
-Sanity Studio offers a fully form custimization. This is how I decided to design the schemas : <br>
-At each changes, it automatically updates the website. <br>
+Sanity Studio offers a fully form custimization. At each changes, it automatically updates the website.<br>
+This is how I decided to design the schemas :
+<br>
 
 - Personal informations, where my client can change her phone number, email address, facebook link etc.
 - Real estate catalog, creates a new real estate document with all the necessary details (title, location, rooms, price, images, description, etc...)
