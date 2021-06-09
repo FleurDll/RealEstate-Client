@@ -35,10 +35,25 @@ At each changes, it automatically updates the website. <br>
 ## Preview
 
 - Desktop<br>
-  ![home](https://user-images.githubusercontent.com/75179031/120815897-8d15be00-c550-11eb-83da-2aed45ab6f7f.png) <br>
-  ![house](https://user-images.githubusercontent.com/75179031/120815850-82f3bf80-c550-11eb-9926-249cecd935f9.png) <br>
+
+<p align="center">
+ <a href="https://www.ameliedufour.com/">
+  <img src="https://user-images.githubusercontent.com/75179031/120815897-8d15be00-c550-11eb-83da-2aed45ab6f7f.png" width="700" height="500">
+  <a/>
+</p>
+  
+  <p align="center">
+    <a href="https://www.ameliedufour.com/">
+  <img src="https://user-images.githubusercontent.com/75179031/120815850-82f3bf80-c550-11eb-9926-249cecd935f9.png" width="700" height="500">
+   <a/>
+  </p>
 
 - Smartphone<br>
-  ![smartphone](https://user-images.githubusercontent.com/75179031/120816200-d534e080-c550-11eb-8134-c5428c9d5fbf.png)
+
+<p align="center">
+ <a href="https://www.ameliedufour.com/">
+  <img src="https://user-images.githubusercontent.com/75179031/120816200-d534e080-c550-11eb-8134-c5428c9d5fbf.png" width="400" height="650">
+  <a/>
+</p>
 
 ## ©2021, Fleur Dalle
