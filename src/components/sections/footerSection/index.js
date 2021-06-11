@@ -29,9 +29,9 @@ const Footer = () => {
                 <FooterContactInfo>06 52 12 00 20</FooterContactInfo>
                 <FooterSocialMedia>
                     <a href="https://www.facebook.com/ameliedufourhappyimmo" rel="noreferrer" target="_blank"><FacebookIcon /></a>
-                    <a href="https://www.instagram.com/dufete/" rel="noreferrer" target="_blank"><InstagramIcon /></a>
+                    {/* <a href="https://www.instagram.com/dufete/" rel="noreferrer" target="_blank"><InstagramIcon /></a> */}
                 </FooterSocialMedia>
-                <FooterCopyright>Fleur Dalle<CopyrightIcon />{currentYear} Tous droits réservés.</FooterCopyright>
+                <FooterCopyright href="https://www.fleurdalle.com" rel="noreferrer" target="_blank">Fleur Dalle<CopyrightIcon />{currentYear} Tous droits réservés.</FooterCopyright>
             </FooterWrap>
         </FooterContainer>
     );
@@ -47,7 +47,7 @@ const Footer = () => {
                     <a href={textData.facebook} rel="noreferrer" target="_blank"><FacebookIcon /></a>
                     {/* <a href={textData.instagram} rel="noreferrer" target="_blank"><InstagramIcon /></a> */}
                 </FooterSocialMedia>
-                <FooterCopyright>Fleur Dalle<CopyrightIcon />{currentYear} Tous droits réservés.</FooterCopyright>
+                <FooterCopyright href="https://www.fleurdalle.com" rel="noreferrer" target="_blank">Fleur Dalle<CopyrightIcon />{currentYear} Tous droits réservés.</FooterCopyright>
             </FooterWrap>
         </FooterContainer>
     );

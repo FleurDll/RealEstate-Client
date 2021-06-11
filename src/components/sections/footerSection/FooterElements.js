@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { COLORS } from "../../../constantsStyles";
 import { BiCopyright } from "react-icons/bi";
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 
@@ -37,8 +38,15 @@ export const FooterContactInfo = styled.h3`
     }
 `;
 
-export const FooterCopyright = styled.div`
+export const FooterCopyright = styled.a`
     font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover{
+        color: ${COLORS.darkBlue}
+    }
 `;
 
 export const FooterSocialMedia = styled.div`
