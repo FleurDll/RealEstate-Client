@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from "../../../client";
-import { FooterTitle, FooterWrap, FooterContactInfo, FooterContainer, FooterCopyright, FooterSocialMedia, CopyrightIcon, FacebookIcon, InstagramIcon } from "./FooterElements";
+import { FooterTitle, FooterWrap, FooterContactInfo, FooterContainer, FooterCopyright, FooterSocialMedia, CopyrightIcon, FacebookIcon } from "./FooterElements";
 
 const Footer = () => {
     const [textData, setTextData] = useState(null);
