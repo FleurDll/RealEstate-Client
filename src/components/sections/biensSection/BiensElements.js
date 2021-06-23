@@ -14,7 +14,7 @@ export const HousesWrapper = styled.div`
     width: ${SECTION.width};
     max-width: ${SECTION.maxWidth};
     padding: ${SECTION.padding};
-
+   
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
         padding: ${SECTION.padding};
