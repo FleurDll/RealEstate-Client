@@ -36,7 +36,7 @@ const BiensTop = ({ localisation, statut, mainImageUrl, mainImageAlt }) => {
         <BiensTopContainer >
             <HouseLocalisation>{localisation}</HouseLocalisation>
             {statut !== "1" && showBanner && renderBanner}
-            <HouseImage id="img-container" src={mainImageUrl} alt={mainImageAlt} />
+            <HouseImage id="img-container" src={`${mainImageUrl}?q=80`} alt={mainImageAlt} />
         </BiensTopContainer>
     );
 };
