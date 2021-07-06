@@ -10,7 +10,7 @@ const BiensTop = ({ localisation, statut, mainImageUrl, mainImageAlt }) => {
             const ImgHeight = document.getElementById("img-container").getBoundingClientRect();
             if (ImgHeight.height !== 0) setContainerHeight(ImgHeight.height);
             setShowBanner(true);
-        }, 1000 / 4);
+        }, 1000 / 3);
 
         return () => {
             clearTimeout(timer);
