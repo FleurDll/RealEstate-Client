@@ -28,9 +28,9 @@ const HeroSection = () => {
                 {showNoDataContainer &&
                     <NoDataMessage>
                         Oh oh, une erreur s'est produite...
-            <br></br>
-                Veuillez réessayer plus tard.
-            </NoDataMessage>
+                        <br></br>
+                        Veuillez réessayer plus tard.
+                    </NoDataMessage>
                 }
             </NoDataContainer>
         );
@@ -39,7 +39,7 @@ const HeroSection = () => {
     return (
         <HeroContainer>
             <HeroBackground>
-                <VideoBackground autoPlay loop muted src={Video} type="video/mp4" />
+                <VideoBackground playsInline autoPlay loop muted src={Video} type="video/mp4" />
             </HeroBackground>
             <HeroContent>
                 <HeroTitle>{textData.titre}</HeroTitle>
