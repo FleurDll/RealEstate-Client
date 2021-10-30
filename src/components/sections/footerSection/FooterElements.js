@@ -29,8 +29,10 @@ export const FooterTitle = styled.h1`
 `;
 
 export const FooterContactInfo = styled.h3`
+    width: 100%;
+    text-align: center;
     color: #F0F0F0;
-    margin: 5px;
+    margin: 5px 0;
     font-size: 18px;
 
     @media screen and (max-width: 480px) {
