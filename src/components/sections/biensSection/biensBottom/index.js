@@ -1,9 +1,20 @@
 import React from 'react';
 import _ from "lodash";
-// eslint-disable-next-line no-unused-vars
 import { BiensBottomContainer, Description, Title, BottomLeft, BottomRight, DescriptionItem, DescriptionItemType, GarageIcon, BedroomIcon, BathIcon } from "./BiensBottomElements";
 
 const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
+    const formatPrix = (prix) => {
+        return Number(_.camelCase(prix)).toLocaleString() + "€"
+    }
+
+    const formatGarage = (garage) => {
+        return garage == null ? 0 : garage
+    }
+
+    const formatType = (type) => {
+        return _.upperFirst(type);
+    }
+
     return (
         <BiensBottomContainer>
             <Description>
@@ -11,13 +22,13 @@ const BiensBottom = ({ title, garage, type, bedroom, bathroom, prix }) => {
             </Description>
             <Description>
                 <BottomLeft>
-                    <DescriptionItemType>{type && `${_.upperFirst(type)}`}</DescriptionItemType>
-                    <DescriptionItem><GarageIcon />{garage}</DescriptionItem>
+                    <DescriptionItemType>{type && formatType(type)}</DescriptionItemType>
+                    <DescriptionItem><GarageIcon />{formatGarage(garage)}</DescriptionItem>
                     <DescriptionItem>{bedroom && <><BedroomIcon />{bedroom}</>}</DescriptionItem>
                     <DescriptionItem>{bathroom && <><BathIcon />{bathroom}</>}</DescriptionItem>
                 </BottomLeft>
                 <BottomRight>
-                    <DescriptionItem>{prix && `${prix}€`}</DescriptionItem>
+                    <DescriptionItem>{prix && formatPrix(prix)}</DescriptionItem>
                 </BottomRight>
             </Description>
         </BiensBottomContainer>
