@@ -3,6 +3,17 @@ import _ from "lodash";
 import { DetailsContainer, Title, Description, Column, DetailsItem, Text, Separation, LocationIcon, PriceIcon, TypeIcon, GarageIcon, BedroomIcon, BathIcon } from "./DetailsElements";
 
 const Details = ({ singleHouse }) => {
+    const formatPrix = (prix) => {
+        return Number(_.camelCase(prix)).toLocaleString() + "€"
+    }
+
+    const formatGarage = (garage) => {
+        return garage == null ? 0 : garage
+    }
+
+    const formatType = (type) => {
+        return _.upperFirst(type);
+    }
     return (
         <DetailsContainer>
             <Title>{singleHouse.title}</Title>
@@ -19,14 +30,14 @@ const Details = ({ singleHouse }) => {
                     <DetailsItem>
                         {singleHouse.type && <>
                             <TypeIcon />
-                            <Text>{_.upperFirst(singleHouse.type)}</Text>
+                            <Text>{formatType(singleHouse.type)}</Text>
                         </>}
                     </DetailsItem>
                     <DetailsItem>
                         {singleHouse.prix &&
                             <>
                                 <PriceIcon />
-                                <Text> {singleHouse.prix}€</Text>
+                                <Text>{formatPrix(singleHouse.prix)}</Text>
                             </>
                         }
                     </DetailsItem>
@@ -35,7 +46,7 @@ const Details = ({ singleHouse }) => {
                 <Column>
                     <DetailsItem>
                         <GarageIcon />
-                        <Text>{singleHouse.garage}</Text>
+                        <Text>{formatGarage(singleHouse.garage)}</Text>
                     </DetailsItem>
                     <DetailsItem>
                         {singleHouse.chambres && <>
