@@ -9,6 +9,7 @@ import Contact from '../components/sections/contactSection';
 import Modal from "../components/modal";
 
 import Tarif from '../components/sections/tarifSection';
+import AvisSection from '../components/sections/avisSection';
 
 const Home = ({ emailJSKey }) => {
     const [showModal, setShowModal] = useState(false);
@@ -24,6 +25,7 @@ const Home = ({ emailJSKey }) => {
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
             <HeroSection />
+            <AvisSection />
             <Biens />
             <Estimation />
             <APropos />

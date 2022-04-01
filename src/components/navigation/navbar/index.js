@@ -42,6 +42,9 @@ const Navbar = ({ toggle }) => {
                 {slug === "/" ?
                     <NavMenu>
                         <NavItem>
+                            <NavLinkS to="avis" smooth={true} duration={500} spy={true} exact="true" offset={-80}>Avis</NavLinkS>
+                        </NavItem>
+                        <NavItem>
                             <NavLinkS to="biens" smooth={true} duration={500} spy={true} exact="true" offset={-80}>Biens</NavLinkS>
                         </NavItem>
                         <NavItem>

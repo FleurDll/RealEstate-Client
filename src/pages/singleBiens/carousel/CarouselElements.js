@@ -7,7 +7,7 @@ export const CarouselWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    ${'' /* margin: 10px; */}
 `;
 
 export const ImagesSlide = styled.div`

@@ -4,3 +4,17 @@
   box-sizing: border-box;
   font-family: "Encode Sans Expanded", sans-serif;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff6584;
+  border-radius: 8px;
+}
