@@ -20,9 +20,11 @@ export const ImagesSlider = styled.div`
 `;
 
 export const Images = styled.img`
-    width: 100%;
-    height: 466px;
-    object-fit: cover;
+    
+    
+    max-width:100%;
+    max-height:466px;
+    object-fit: fill;
     box-shadow: rgb(0 0 0 / 50%) 0px 0.0625rem 0.1875rem 0px;
     border-radius: 8px;
 
