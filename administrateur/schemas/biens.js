@@ -121,7 +121,7 @@ export default {
                     { value: "B", title: "B" },
                     { value: "C", title: "C" },
                     { value: "D", title: "D" },
-                    { value: "E", title: "E" },
+                    { value: "E", title: "E" }, { value: "F", title: "F" },
                     { value: "G", title: "G" },
                 ],
             },
