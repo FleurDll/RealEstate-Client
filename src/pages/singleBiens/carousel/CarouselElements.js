@@ -12,6 +12,8 @@ export const CarouselWrapper = styled.div`
 
 export const ImagesSlide = styled.div`
     max-width: 700px;
+    max-width:100%;
+    max-height:466px;
 `;
 
 export const ImagesSlider = styled.div`
@@ -20,8 +22,6 @@ export const ImagesSlider = styled.div`
 `;
 
 export const Images = styled.img`
-    
-    
     max-width:100%;
     max-height:466px;
     object-fit: fill;
